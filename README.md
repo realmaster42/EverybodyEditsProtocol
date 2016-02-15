@@ -142,6 +142,7 @@ The description of the Everybody Edits game protocol.
   - [Effects](#model-effects)
   - [Keys](#model-keys)
   - [Teams](#model-teams)
+
 ___
 
 # <a id="game-information">Game Information</a>
@@ -152,12 +153,13 @@ Version = 206
 
 # <a id="room-types">Room Types</a>
 ```
-Normal = EverybodyeditsXXX
-Lobby = LobbyXXX
-Beta = BetaXXX
-CrewLobby = CrewLobbyXXX
+Normal      = EverybodyeditsXXX
+Beta        = BetaXXX
+Lobby       = LobbyXXX
+Crew Lobby  = CrewLobbyXXX
+Guest Lobby = GuestLobbyXXX
 
-(Replace XXX with current version)
+(Replace XXX with the current version)
 ```
 ___
 
