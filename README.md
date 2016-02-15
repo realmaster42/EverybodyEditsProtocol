@@ -80,6 +80,7 @@ The description of the Everybody Edits game protocol.
   - [write](#rm-write)
 - [Send Messages](#send-messages)
   - [access](#sm-access)
+  - [addToCrew](#sm-addToCrew)
   - [admin](#sm-admin)
   - [aura](#sm-aura)
   - [autosay](#sm-autosay)
@@ -127,7 +128,7 @@ The description of the Everybody Edits game protocol.
   - [TOKEN](#sm-TOKEN)
   - [TOKENb](#sm-TOKENb)
   - [TOKENc](#sm-TOKENc)
-  - [TOKENg](#sm-TOKENg)
+  - [TOKENf](#sm-TOKENf)
   - [TOKENg](#sm-TOKENg)
   - [TOKENk](#sm-TOKENk)
   - [TOKENm](#sm-TOKENm)
@@ -540,7 +541,7 @@ Occurs when you are given magic smiley.
 `[0] String` Smiley
 > The identifier of the magic smiley.
 
-### <a id="rm-gold">"god"</a>
+### <a id="rm-god">"god"</a>
 Occurs when a player toggles god mode.
 
 `[0] Integer` Player Id
@@ -989,7 +990,7 @@ Occurs when the world description is changed.
 `[0] String` Description
 > The world description.
 
-### <a id="roomVisible">"roomVisible"</a>
+### <a id="rm-roomVisible">"roomVisible"</a>
 Occurs when the world accessibility is changed.
 
 `[0] Boolean` Accessible
@@ -1032,7 +1033,7 @@ Occurs when key deactivates or timed doors change their state.
 > The name of the key (or timed door).
 > *See [Keys](#model-keys).*
 
-### <a id="rm-smileyGoldBorder>"smileyGoldBorder"</a>
+### <a id="rm-smileyGoldBorder">"smileyGoldBorder"</a>
 Occurs when someone enables or disables gold smiley border.
 
 `[0] Integer` Player Id
@@ -1194,6 +1195,9 @@ Sent to attempt to get edit rights by using the edit key.
 
 `[0] String` Edit Key
 > The edit key.
+
+### <a id="sm-addToCrew">"addToCrew"</a>
+Sent to accept adding of the world to a crew request.
 
 ### <a id="sm-admin">"admin"</a>
 Sent to toggle administrator mode.
@@ -1415,7 +1419,7 @@ ___
 ### <a id="sm-rejectAddToCrew">"rejectAddToCrew"</a>
 Sent to reject add to crew request.
 
-### <a id="sm-addToCrew">"requestAddToCrew"</a>
+### <a id="sm-requestAddToCrew">"requestAddToCrew"</a>
 Sent to request adding of the world to a crew.
 
 `[0] String` Crew Id
@@ -1496,7 +1500,7 @@ Sent to change the zombie limit.
 `[0] Integer` Zombie Limit
 > The zombie limit.
 
-### <a id="sm-smileyGoldBorder>"smileyGoldBorder"</a>
+### <a id="sm-smileyGoldBorder">"smileyGoldBorder"</a>
 Sent to enable or disable gold smiley border.
 
 `[0] Boolean` Gold Smiley Border
@@ -1538,7 +1542,7 @@ Sent to un-like the world.
 
 ___
 
-**NOTE: TOKEN in names of these messages should be replaced with decrypted token received from ["init"](#rm-init) message.
+**NOTE:** TOKEN in names of these messages should be replaced with decrypted token received from ["init"](#rm-init) message.
 
 ### <a id="sm-TOKEN">"TOKEN"</a>
 Sent to place a block in the world.
