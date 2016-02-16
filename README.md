@@ -1801,8 +1801,9 @@ Canvas Backgrounds			= brickbgcanvas
 Carnival backgrounds		= brickbgcarnival
 Neon Backgrounds			= brickneon
 Monster 					= brickmonster
+```
 
-### <a id="shop-blocks">Blocks</a>
+### <a id="shop-smilies">Smilies</a>
 ```
 Artist				= smileyartist
 Dark Wizard 		= smileydarkwizard
@@ -1909,6 +1910,7 @@ Gold Smiley			= goldmember
 Gold Ninja			= goldmember
 Gold Robot			= goldmember
 Gold Top Hat		= goldmember
+```
 
 ### <a id="shop-auracolor">Aura Color</a>
 ```
@@ -1921,6 +1923,7 @@ Orange	= auraorange
 Cyan	= auracyan
 Pink 	= aurapink
 Gold 	= goldmember
+```
 
 ### <a id="shop-aurashape">Aura Shapre</a>
 ```
