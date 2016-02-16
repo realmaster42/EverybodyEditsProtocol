@@ -84,7 +84,9 @@ The description of the Everybody Edits game protocol.
   - [admin](#sm-admin)
   - [aura](#sm-aura)
   - [autosay](#sm-autosay)
+  - [b](#sm-b)
   - [c](#sm-c)
+  - [crown](#sm-crown)
   - [caketouch](#sm-caketouch)
   - [checkpoint](#sm-checkpoint)
   - [changeBadge](#sm-changeBadge)
@@ -104,6 +106,7 @@ The description of the Everybody Edits game protocol.
   - [m](#sm-m)
   - [mod](#sm-mod)
   - [name](#sm-name)
+  - [pressKey](#sm-pressKey)
   - [ps](#sm-ps)
   - [rejectAddToCrew](#sm-rejectAddToCrew)
   - [requestAddToCrew](#sm-requestAddToCrew)
@@ -119,21 +122,13 @@ The description of the Everybody Edits game protocol.
   - [setRoomVisible](#sm-setRoomVisible)
   - [setStatus](#sm-setStatus)
   - [setZombieLimit](#sm-setZombieLimit)
+  - [smiley](#sm-smiley)
   - [smileyGoldBorder](#sm-smileyGoldBorder)
   - [team](#sm-team)
   - [time](#sm-time)
   - [touch](#sm-touch)
   - [unfavorite](#sm-unfavorite)
   - [unlike](#sm-unlike)
-  - [TOKEN](#sm-TOKEN)
-  - [TOKENb](#sm-TOKENb)
-  - [TOKENc](#sm-TOKENc)
-  - [TOKENf](#sm-TOKENf)
-  - [TOKENg](#sm-TOKENg)
-  - [TOKENk](#sm-TOKENk)
-  - [TOKENm](#sm-TOKENm)
-  - [TOKENr](#sm-TOKENr)
-  - [TOKENy](#sm-TOKENy)
 - [Models](#models)
   - [Auto Text](#model-auto-text)
   - [Badges](#model-badges)
@@ -312,12 +307,9 @@ Occurs when a block is placed in the world.
 ### <a id="rm-backgroundColor">"backgroundColor"</a>
 Occurs when the background color of the world is changed.
 
-`[0] Boolean` Enabled
-> Value indicating whether the custom background color is enabled.
-
-`[1] UInt` Color
+`[0] UInt` Color
 > The color of the background.
-> **NOTE:** Received only if the custom background color is enabled.
+> **NOTE:** Transparent color means that the custom background color is disabled.
 
 ### <a id="rm-badgeChange">"badgeChange"</a>
 Occurs when a player changes badge.
@@ -609,109 +601,106 @@ Contains world information such as world name and the world content.
 `[4] Integer` Likes
 > The amount of likes.
 
-`[5] String` Encrypted Token
-> The encrypted world token.
-
-`[6] Integer` Player Id
+`[5] Integer` Player Id
 > The player's identifier.
 
-`[7] Integer` Smiley
+`[6] Integer` Smiley
 > The player's smiley identifier.
 
-`[8] Integer` Aura Shape
+`[7] Integer` Aura Shape
 > The player's aura shape identifier.
 
-`[9] Integer` Aura Color
+`[8] Integer` Aura Color
 > The player's aura color identifier.
 
-`[10] Boolean` Gold Smiley Border
+`[9] Boolean` Gold Smiley Border
 > Value indicating whether the player is wearing gold smiley border.
 
-`[11] Double` X
+`[10] Double` X
 > The x coordinate of the player's spawn position.
 
-`[12] Double` Y
+`[11] Double` Y
 > The y coordinate of the player's spawn position.
 
-`[13] UInt` Chat Color
+`[12] UInt` Chat Color
 > The player's chat color.
 
-`[14] String` Username
+`[13] String` Username
 > The player's username.
 
-`[15] Boolean` Can Edit
+`[14] Boolean` Can Edit
 > Value indicating whether the player can edit.
 
-`[16] Boolean` Is Owner
+`[15] Boolean` Is Owner
 > Value indicating whether the player is world owner.
 
-`[17] Boolean` Favorited
+`[16] Boolean` Favorited
 > Value indicating whether the player has favorited this world.
 
-`[18] Boolean` Liked
+`[17] Boolean` Liked
 > Value indicating whether the player has liked this world.
 
-`[19] Integer` World Width
+`[18] Integer` World Width
 > The width of the world.
 
-`[20] Integer` World Height
+`[19] Integer` World Height
 > The height of the world.
 
-`[21] Double` World Gravity Multiplier
+`[20] Double` World Gravity Multiplier
 > The world's gravity multiplier.
 
-`[22] UInt` Background Color
+`[21] UInt` Background Color
 > The color of the background.
-> **NOTE:** Transparent color mean that custom background color is disabled.
+> **NOTE:** Transparent color means that the custom background color is disabled.
 
-`[23] Boolean` Accessible
+`[22] Boolean` Accessible
 > Value indicating whether this world is accessible by other players.
 
-`[24] Boolean` Hidden From Lobby
+`[23] Boolean` Hidden From Lobby
 > Value indicating whether this world is hidden from the lobby and profile.
 
-`[25] Boolean` Spectating Allowed
+`[24] Boolean` Spectating Allowed
 > Value indicating whether spectating in this world is allowed.
 
-`[26] String` Description
+`[25] String` Description
 > The description of the world.
 
-`[27] Integer` Curse Limit
+`[26] Integer` Curse Limit
 > The curse limit.
 
-`[28] Integer` Zombie Limit
+`[27] Integer` Zombie Limit
 > The zombie limit.
 
-`[29] Boolean` Belongs To Campaign
+`[28] Boolean` Belongs To Campaign
 > Value indicating whether this world is part of a campaign.
 
-`[30] String` Crew Id
+`[29] String` Crew Id
 > The identifier of the crew to which belongs this world.
 
-`[31] String` Crew Name
+`[30] String` Crew Name
 > The name of the crew to which belongs this world.
 
-`[32] Boolean` Can Change World Options
+`[31] Boolean` Can Change World Options
 > Value indicating whether the player can change world options.
 
-`[33] Integer` Crew Status
+`[32] Integer` Crew Status
 > The crew status of the world.
 > *See [Crew World Status](#model-crew-status).*
 
-`[34] String` Badge
+`[33] String` Badge
 > The player's badge identifier.
 > *See [Badges](#model-badges).*
 
-`[35] Boolean` Is Crew Member
+`[34] Boolean` Is Crew Member
 > Value indicating whether the player is a member of the crew to which belongs this world.
 
-`[36] Boolean` Minimap Enabled
+`[35] Boolean` Minimap Enabled
 > Value indicating whether the minimap is enabled in this world.
 
-`[37] Boolean` Lobby Preview Enabled
+`[36] Boolean` Lobby Preview Enabled
 > Value indicating whether the lobby preview is enabled in this world.
 
-`[38] String` ws
+`[37] String` ws
 > Indicates the start of the world data.
 
 `[...]`
@@ -1222,6 +1211,67 @@ Sent to use auto-say message.
 
 ___
 
+### <a id="sm-b">"b"</a>
+Sent to place a block in the world.
+
+`[0] Integer` Layer
+> The layer identifier.
+
+`[1] Integer` X
+> The x coordinate of the block's position.
+
+`[2] Integer` Y
+> The y coordinate of the block's position.
+
+`[3] Integer` Block Id
+> The block identifier.
+
+Additional arguments:
+
+- For sound blocks:
+
+`[4] Integer` Sound Id
+> The sound identifier.
+
+- For admin label:
+
+`[4] String` Text
+> The text.
+
+`[5] String` Text Color
+> The text color.
+
+- For blocks with number value:
+
+`[4] Integer` Number Value
+> The number value.
+
+- For portal:
+
+`[4] Integer` Portal Rotation
+> The portal rotation.
+
+`[5] Integer` Portal Id
+> The portal identifier.
+
+`[6] Integer` Portal Target
+> The portal target identifier.
+
+- For world portal:
+
+`[4] String` Target
+> The world portal target.
+
+- For signs:
+
+`[4] String` Text
+> The text.
+
+`[5] Integer` Sign Type
+> The sign type.
+
+___
+
 ### <a id="sm-c">"c"</a>
 Sent to collect a coin.
 
@@ -1264,6 +1314,15 @@ Sent to change the badge.
 
 ### <a id="sm-clear">"clear"</a>
 Sent to clear the world.
+
+### <a id="sm-crown">"crown"</a>
+Sent to collect the gold crown.
+
+`[0] UInt` X
+> The x coordinate of the crown's position.
+
+`[1] UInt` Y
+> The y coordinate of the crown's position.
 
 ___
 
@@ -1407,6 +1466,19 @@ Sent to change the world name.
 
 ___
 
+### <a id="sm-pressKey">"pressKey"</a>
+Sent to activate a key.
+
+`[0] Integer` X
+> The x coordinate of the key's position.
+
+`[1] Integer` Y
+> The y coordinate of the key's position.
+
+`[2] String` Key
+> The name of the key.
+> *See [Keys](#model-keys).*
+
 ### <a id="sm-ps">"ps"</a>
 Sent to change the purple switch state.
 
@@ -1502,6 +1574,12 @@ Sent to change the zombie limit.
 `[0] Integer` Zombie Limit
 > The zombie limit.
 
+### <a id="sm-smiley">"smiley"</a>
+Sent to change smiley.
+
+`[0] Integer` Smiley
+> The smiley identifier.
+
 ### <a id="sm-smileyGoldBorder">"smileyGoldBorder"</a>
 Sent to enable or disable gold smiley border.
 
@@ -1541,138 +1619,6 @@ Sent to un-favorite the world.
 
 ### <a id="sm-unlike">"unlike"</a>
 Sent to un-like the world.
-
-___
-
-**NOTE:** TOKEN in names of these messages should be replaced with decrypted token received from ["init"](#rm-init) message.
-
-### <a id="sm-TOKEN">"TOKEN"</a>
-Sent to place a block in the world.
-
-`[0] Integer` Layer
-> The layer identifier.
-
-`[1] Integer` X
-> The x coordinate of the block's position.
-
-`[2] Integer` Y
-> The y coordinate of the block's position.
-
-`[3] Integer` Block Id
-> The block identifier.
-
-Additional arguments:
-
-- For sound blocks:
-
-`[4] Integer` Sound Id
-> The sound identifier.
-
-- For admin label:
-
-`[4] String` Text
-> The text.
-
-`[5] String` Text Color
-> The text color.
-
-- For blocks with number value:
-
-`[4] Integer` Number Value
-> The number value.
-
-- For portal:
-
-`[4] Integer` Portal Rotation
-> The portal rotation.
-
-`[5] Integer` Portal Id
-> The portal identifier.
-
-`[6] Integer` Portal Target
-> The portal target identifier.
-
-- For world portal:
-
-`[4] String` Target
-> The world portal target.
-
-- For signs:
-
-`[4] String` Text
-> The text.
-
-`[5] Integer` Sign Type
-> The sign type.
-
-### <a id="sm-TOKENb">"TOKENb"</a>
-Sent to activate blue key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
-
-### <a id="sm-TOKENc">"TOKENc"</a>
-Sent to activate cyan key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
-
-### <a id="sm-TOKENf">"TOKENf"</a>
-Sent to change smiley.
-
-`[0] Integer` Smiley
-> The smiley identifier.
-
-### <a id="sm-TOKENg">"TOKENg"</a>
-Sent to activate green key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
-
-### <a id="sm-TOKENk">"TOKENk"</a>
-Sent to collect gold crown.
-
-`[0] UInt` X
-> The x coordinate of the crown's position.
-
-`[1] UInt` Y
-> The y coordinate of the crown's position.
-
-### <a id="sm-TOKENm">"TOKENm"</a>
-Sent to activate magenta key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
-
-### <a id="sm-TOKENr">"TOKENr"</a>
-Sent to activate red key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
-
-### <a id="sm-TOKENy">"TOKENy"</a>
-Sent to activate yellow key.
-
-`[0] UInt` X
-> The x coordinate of the key's position.
-
-`[1] UInt` Y
-> The y coordinate of the key's position.
 
 ___
 
