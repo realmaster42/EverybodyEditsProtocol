@@ -3,7 +3,6 @@ The description of the Everybody Edits game protocol.
 
 ## Table of contents
 - [Game Information](#game-information)
-- [Shop Information](#shop-information)
 - [Room Types](#room-types)
 - [Receive Messages](#receive-messages)
   - [access](#rm-access)

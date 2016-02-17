@@ -254,7 +254,6 @@ Ornate		= goldmember
 Crew						= crew
 Beta Access					= pro
 Change Username			 	= changeusername
-Infinite Portal Doors 		= infiniteportalsdoors
 Gem Code - 50 Gems			= gemcode50
 Gem Code - 105 Gems			= gemcode105
 Gem Code - 220 Gems			= gemcode220
