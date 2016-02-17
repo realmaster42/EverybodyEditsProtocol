@@ -1946,6 +1946,7 @@ Default		=
 Pinwheel	= aurashapepinwheel
 Torus		= aurashapetorus
 Ornate		= goldmember
+```
 
 ### <a id="shop-misc">Misc</a>
 ```
