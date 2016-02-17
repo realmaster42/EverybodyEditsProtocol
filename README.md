@@ -3,6 +3,7 @@ The description of the Everybody Edits game protocol.
 
 ## Table of contents
 - [Game Information](#game-information)
+- [Shop Information](#shop-information)
 - [Room Types](#room-types)
 - [Receive Messages](#receive-messages)
   - [access](#rm-access)
@@ -1704,7 +1705,7 @@ timedoor
 
 ___
 
-# <a id="shop">Shop Information</a>
+# <a id="shop-information">Shop Information</a>
 
 ### <a id="shop-blocks">Blocks</a>
 ```
@@ -1781,7 +1782,7 @@ Autumn 2014					= brickautumn2014
 Christmas 2014				= brickchristmas2014
 Basic Background Blocks 	= brickoneway
 Valentines 2015				= brickvalentines2015
-Magic Blocks				= brickmagic, brickmagic2, brickmagic3, brickmagic4, brickmagic5
+Magic Bricks(1, 2, 3, 4, 5)	= brickmagic, brickmagic2, brickmagic3, brickmagic4, brickmagic5
 Effect Blocks				= brickeffectjump, brickeffectfly, brickeffectspeed, brickeffectlowgravity, brickeffectprotection, brickeffectcurse, brickeffectmultijump
 Gold Membership Blocks		= goldmember
 Cave Backgrounds			= brickcave
@@ -1912,6 +1913,20 @@ Gold Robot			= goldmember
 Gold Top Hat		= goldmember
 ```
 
+### <a id="shop-worlds">Worlds</a>
+```
+Small World			= world0
+Medium World		= world1
+Large World			= world2
+Massive World		= world3
+Wide World			= world4
+Great World			= world5
+Tall World			= world6
+Ultra Wide World	= world7
+Large Space World	= world8
+Huge World			= world11
+```
+
 ### <a id="shop-auracolor">Aura Color</a>
 ```
 Red		= aurared
@@ -1927,19 +1942,22 @@ Gold 	= goldmember
 
 ### <a id="shop-aurashape">Aura Shapre</a>
 ```
-
 Default		=
 Pinwheel	= aurashapepinwheel
 Torus		= aurashapetorus
 Ornate		= goldmember
 
-
-
-
-
-
-
-
-
-
-
+### <a id="shop-misc">Misc</a>
+```
+Crew						= crew
+Beta Access					= pro
+Change Username			 	= changeusername
+Infinite Portal Doors 		= infiniteportalsdoors
+Gem Code - 50 Gems			= gemcode50
+Gem Code - 105 Gems			= gemcode105
+Gem Code - 220 Gems			= gemcode220
+Gold Membership - 1 month	= gold1
+Gold Membership - 3 months	= gold3
+Gold Membership - 6 months	= gold6
+Gold Membership - 1 year	= gold12
+```
