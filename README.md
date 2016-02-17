@@ -1710,7 +1710,6 @@ ___
 ### <a id="shop-blocks">Blocks</a>
 ```
 Basic Package  				=
-Beta Access					= pro
 Brick Blocks				=
 Metal Blocks 				=
 Grass Blocks 				=
