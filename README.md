@@ -268,7 +268,7 @@ Occurs when a player changed their aura shape or color.
 `[0] Integer` Player Id
 > The player's identifier.
 
-`[2] Integer` Aura Shape
+`[1] Integer` Aura Shape
 > The aura shape identifier.
 
 `[2] Integer` Aura Color
