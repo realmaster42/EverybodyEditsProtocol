@@ -169,16 +169,16 @@ Occurs when you are given edit rights in the world.
 Occurs when someone joins the world.
 
 `[0] Integer` Id
-> The player's identifier.
+> The player's id.
 
 `[1] String` Username
 > The player's username.
 
 `[2] String` ConnectUserId
-> The player's unique user identifier.
+> The player's unique user id.
 
 `[3] Integer` Smiley
-> The player's smiley identifier.
+> The player's smiley id.
 
 `[4] Double` X
 > The x coordinate of the player's position.
@@ -217,20 +217,20 @@ Occurs when someone joins the world.
 > Value indicating whether the player is in moderator mode.
 
 `[16] Integer` Team
-> The player's team identifier.
+> The player's team id.
 > *See [Teams](#model-teams).*
 
 `[17] Integer` Aura Shape
-> The player's aura shape identifier.
+> The player's aura shape id.
 
 `[18] Integer` Aura Color
-> The player's aura color identifier.
+> The player's aura color id.
 
 `[19] Integer` Chat Color
 > The player's chat color.
 
 `[20] String` Badge
-> The player's badge identifier.
+> The player's badge id.
 > *See [Badges](#model-badges).*
 
 `[21] Boolean` Crew Member
@@ -244,7 +244,7 @@ Occurs when someone joins the world.
 Occurs when world was successfully added to a crew.
 
 `[0] String` Crew Id
-> The identifier of the crew to which the world was added.
+> The id of the crew to which the world was added.
 
 `[1] String` Crew Name
 > The name of the crew to which the world was added.
@@ -253,7 +253,7 @@ Occurs when world was successfully added to a crew.
 Occurs when a player toggles administrator mode.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Is In Administrator Mode
 > Value indicating whether the player is now in administrator mode.
@@ -268,19 +268,19 @@ Occurs when spectating in the world setting is changed.
 Occurs when a player changed their aura shape or color.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Aura Shape
-> The aura shape identifier.
+> The aura shape id.
 
 `[2] Integer` Aura Color
-> The aura color identifier.
+> The aura color id.
 
 ### <a id="rm-autotext">"autotext"</a>
 Occurs when a player uses auto-text.
 
 `[0] Integer` Payer Id
-> The player's identifier.
+> The player's id.
 
 `[1] String` Auto-Text
 > The automatic text value.
@@ -292,7 +292,7 @@ Occurs when a player uses auto-text.
 Occurs when a block is placed in the world.
 
 `[0] Integer` Layer
-> The layer identifier.
+> The layer id.
 
 `[1] UInt` X
 > The x coordinate of the block's position.
@@ -301,10 +301,10 @@ Occurs when a block is placed in the world.
 > The y coordinate of the block's position.
 
 `[3] UInt` Block Id
-> The block identifier.
+> The block id.
 
 `[4] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ### <a id="rm-backgroundColor">"backgroundColor"</a>
 Occurs when the background color of the world is changed.
@@ -317,10 +317,10 @@ Occurs when the background color of the world is changed.
 Occurs when a player changes their badge.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] String` Badge
-> The badge identifier.
+> The badge id.
 > *See [Badges](#model-badges).*
 
 ### <a id="rm-banned">"banned"</a>
@@ -336,13 +336,13 @@ Occurs when a block with number value is placed in the world.
 > The y coordinate of the block's position.
 
 `[2] UInt` Block Id
-> The block's identifier.
+> The block's id.
 
 `[3] UInt` Number Value
 > The number value.
 
 `[4] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ### <a id="rm-br">"br"</a>
 Occurs when a morphable block is placed in the world.
@@ -354,13 +354,13 @@ Occurs when a morphable block is placed in the world.
 > The y coordinate of the block's position.
 
 `[3] UInt` Morph
-> The morph identifier.
+> The morph id.
 
 `[4] Integer` Layer
-> The layer identifier.
+> The layer id.
 
 `[5] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ### <a id="rm-bs">"bs"</a>
 Occurs when a sound block is placed in the world.
@@ -372,13 +372,13 @@ Occurs when a sound block is placed in the world.
 > The y coordinate of the block's position.
 
 `[2] UInt` Block Id
-> The block identifier.
+> The block id.
 
 `[3] Integer` Sound Id
-> The sound identifier.
+> The sound id.
 
 `[4] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 
 
@@ -386,7 +386,7 @@ Occurs when a sound block is placed in the world.
 Occurs when a player's gold or blue coin count changes.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Gold Coins
 > The amount of collected gold coins.
@@ -427,7 +427,7 @@ This message has 2 possible outcomes:
 Both outcomes are followed with list of rewards: 
 
 `[...] String` Id
-> The identifier of the reward.
+> The id of the reward.
 
 `[...] UInt` Quantity
 > The quantity of the reward.
@@ -442,10 +442,10 @@ Occurs when the world is cleared.
 > The height of the world.
 
 `[2] UInt` Border Block Id
-> The identifier of the block used as a world border.
+> The id of the block used as a world border.
 
 `[3] UInt` Fill Block Id
-> The identifier of the block used to fill the world.
+> The id of the block used to fill the world.
 
 ### <a id="rm-completedLevel">"completedLevel"</a>
 Occurs when completing a world by touching win trophy.  
@@ -474,7 +474,7 @@ Occurs when a player receives or loses edit rights.
 **NOTE:** You can only recieve this message if you are the world owner.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Can Edit
 > Value indicating whether the player is now allowed to edit in the world.
@@ -483,10 +483,10 @@ Occurs when a player receives or loses edit rights.
 Occurs when a player gains or looses an effect.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Effect
-> The effect's identifier.
+> The effect's id.
 > *See [Effects](#model-effects).*
 
 `[2] Boolean` Enabled
@@ -513,10 +513,10 @@ Occurs when effect limits are changed.
 Occurs when someone changes their smiley.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Smiley
-> The smiley identifier.
+> The smiley id.
 
 ### <a id="rm-favorited">"favorited"</a>
 Occurs when you successfully favorited the world.
@@ -525,19 +525,19 @@ Occurs when you successfully favorited the world.
 Occurs when you are given a magic brick package.
 
 `[0] String` Package
-> The identifier of the magic brick package.
+> The id of the magic brick package.
 
 ### <a id="rm-givemagicsmiley">"givemagicsmiley"</a>
 Occurs when you are given magic smiley.
 
 `[0] String` Smiley
-> The identifier of the magic smiley.
+> The id of the magic smiley.
 
 ### <a id="rm-god">"god"</a>
 Occurs when a player toggles god mode.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Is In God Mode
 > Value indicating whether this player is now in god mode.
@@ -547,7 +547,7 @@ Occurs when a player toggles god mode.
 Occurs when a player touches a key or timed doors change their state.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] String` Key
 > The name of the key (or timed door).
@@ -598,16 +598,16 @@ Contains world information such as world name and the world content.
 > The amount of likes.
 
 `[5] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[6] Integer` Smiley
-> The player's smiley identifier.
+> The player's smiley id.
 
 `[7] Integer` Aura Shape
-> The player's aura shape identifier.
+> The player's aura shape id.
 
 `[8] Integer` Aura Color
-> The player's aura color identifier.
+> The player's aura color id.
 
 `[9] Boolean` Gold Smiley Border
 > Value indicating whether the player is wearing gold smiley border.
@@ -671,7 +671,7 @@ Contains world information such as world name and the world content.
 > Value indicating whether this world is part of a campaign.
 
 `[29] String` Crew Id
-> The identifier of the crew to which belongs this world.
+> The id of the crew to which belongs this world.
 
 `[30] String` Crew Name
 > The name of the crew to which belongs this world.
@@ -684,7 +684,7 @@ Contains world information such as world name and the world content.
 > *See [Crew World Status](#model-crew-status).*
 
 `[33] String` Badge
-> The player's badge identifier.
+> The player's badge id.
 > *See [Badges](#model-badges).*
 
 `[34] Boolean` Is Crew Member
@@ -736,20 +736,20 @@ Additional parameters received when this campaign world is unlocked:
 Occurs when a player collects gold crown.
 
 `[0] Integer` Player Id
-> The player's identifier.  
+> The player's id.  
 > **NOTE:** Set to `-1` if there is no player with a crown.
 
 ### <a id="rm-kill">"kill"</a>
 Occurs when a player is killed due to expired effect or /kill, /killall commands.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 ### <a id="rm-ks">"ks"</a>
 Occurs when someone receives a silver crown.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 
 ### <a id="rm-lb">"lb"</a>
@@ -762,7 +762,7 @@ Occurs when someone places a label block.
 > The y coordinate of the block's position.
 
 `[2] Integer` Block Id
-> The identifier of the block.
+> The id of the block.
 
 `[3] String` Text
 > The text.
@@ -771,13 +771,13 @@ Occurs when someone places a label block.
 > The color of the text.
 
 `[5] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ### <a id="rm-left">"left"</a>
 Occurs when someone leaves the world.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 ### <a id="rm-liked">"liked"</a>
 Occurs when you liked the world.
@@ -796,7 +796,7 @@ Occurs when you lose edit rights.
 Occurs when a user moves.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Double` X
 > The x coordinate of the player's position.
@@ -843,7 +843,7 @@ Occurs when the minimap is toggled.
 Occurs when a player toggles moderator mode.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Is In Moderator Mode
 > Value indicating whether the player is now in moderator mode.
@@ -852,7 +852,7 @@ Occurs when a player toggles moderator mode.
 Occurs when you muted or un-umted a player.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Muted
 > Value indicating whether the player is now muted.
@@ -862,10 +862,10 @@ Occurs when you muted or un-umted a player.
 Occurs when a player touches a purple switch.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Switch Id
-> The switch identifier.
+> The switch id.
 
 `[2] Integer` Enabled
 > Value indicating the state of the switch.  
@@ -875,7 +875,7 @@ Occurs when a player touches a purple switch.
 Occurs after join. Contains information about initial switch states.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] ByteArray` Switch States
 > The byte array describing switch states.
@@ -890,19 +890,19 @@ Occurs when a portal is placed in the world.
 > The y coordinate of the block's position.
 
 `[2] UInt` Block Id
-> The block identifier.
+> The block id.
 
 `[3] UInt` Portal Rotation
 > The portal rotation.
 
 `[4] UInt` Portal Id
-> The portal identifier.
+> The portal id.
 
 `[5] UInt` Portal Target
-> The portal target identifier.
+> The portal target id.
 
 `[6] Integer` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 
 ### <a id="rm-reset">"reset"</a>
@@ -921,7 +921,7 @@ Occurs when world is reverted to the last save using the /loadlevel command.
 Occurs when your campaign progress is restored.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Double` X
 > The x coordinate of the player's position.
@@ -985,7 +985,7 @@ Occurs when you saved the world.
 Occurs when a player sends a chat message.
 
 `[0 Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] String` Text
 > The chat message text.
@@ -1017,7 +1017,7 @@ Occurs when a key deactivates or timed doors change their state.
 Occurs when someone toggles the gold smiley border.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Gold Smiley Border
 > Value indicating whether the player is wearing gold smiley border.
@@ -1027,10 +1027,10 @@ Occurs when someone toggles the gold smiley border.
 Occurs when a player changes their team.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` Team
-> The team identifier.
+> The team id.
 > *See [Teams](#model-teams).*
 
 ### <a id="rm-tele">"tele"</a>
@@ -1042,7 +1042,7 @@ Occurs when multiple players are teleported or respawns (including death.)
 Repeated for each teleported player:
 
 `[...] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[...] Double` X
 > The x coordinate of the player's respawn position.
@@ -1057,7 +1057,7 @@ Repeated for each teleported player:
 Occurs when a player is teleported to another location.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Integer` X
 > The x coordinate of the player's position.
@@ -1078,7 +1078,7 @@ Occurs as a response to the ["time"](#sm-time) send message.
 Occurs when a player received or lost ability to toggle god mode.
 
 `[0] Integer` Player Id
-> The player's identifier.
+> The player's id.
 
 `[1] Boolean` Can Toggle God
 > Value indicating whether the player can now toggle god mode.
@@ -1093,7 +1093,7 @@ Occurs when a sign block is placed in the world.
 > The y coordinate of the block's position.
 
 `[2] UInt` Block Id
-> The block identifier.
+> The block id.
 
 `[3] String` Text
 > The text.
@@ -1102,7 +1102,7 @@ Occurs when a sign block is placed in the world.
 > The type of the sign.
 
 `[5] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ___
 
@@ -1147,13 +1147,13 @@ Occurs when a world portal is placed in the world.
 > The y coordinate of the block's position.
 
 `[2] UInt` Block Id
-> The block identifier.
+> The block id.
 
 `[3] String` Target
 > The target of the world portal.
 
 `[4] UInt` Player Id
-> The identifier of the player which placed this block.
+> The id of the player which placed this block.
 
 ### <a id="rm-write">"write"</a>
 Occurs when a non-player message is received (system messages, etc.)
@@ -1183,16 +1183,16 @@ Sent to toggle administrator mode.
 Sent to change aura shape and/or color.
 
 `[0] Integer` Aura Shape
-> The aura shape identifier.
+> The aura shape id.
 
 `[1] Integer` Aura Color
-> The aura color identifier.
+> The aura color id.
 
 ### <a id="sm-autosay">"autosay"</a>
 Sent to use auto-say message.
 
 `[0] Integer` Auto-Text
-> The auto-text message identifier.
+> The auto-text message id.
 > *See [Auto Text](#model-auto-text).*
 
 
@@ -1200,7 +1200,7 @@ Sent to use auto-say message.
 Sent to place a block in the world.
 
 `[0] Integer` Layer
-> The layer identifier.
+> The layer id.
 
 `[1] Integer` X
 > The x coordinate of the block's position.
@@ -1209,14 +1209,14 @@ Sent to place a block in the world.
 > The y coordinate of the block's position.
 
 `[3] Integer` Block Id
-> The block identifier.
+> The block id.
 
 Additional arguments:
 
 - For sound blocks:
 
 `[4] Integer` Sound Id
-> The sound identifier.
+> The sound id.
 
 - For admin label:
 
@@ -1237,10 +1237,10 @@ Additional arguments:
 > The portal rotation.
 
 `[5] Integer` Portal Id
-> The portal identifier.
+> The portal id.
 
 `[6] Integer` Portal Target
-> The portal target identifier.
+> The portal target id.
 
 - For world portal:
 
@@ -1293,7 +1293,7 @@ Sent to change checkpoint position.
 Sent to change the badge.
 
 `[0] String` Badge
-> The badge identifier.
+> The badge id.
 > *See [Badges](#model-badges).*
 
 ### <a id="sm-clear">"clear"</a>
@@ -1333,7 +1333,7 @@ Sent to activate or deactivate an effect.
 > The y coordinate of the effect's position.
 
 `[2] Integer` Effect
-> The effect identifier.
+> The effect id.
 > *See [Effects](#model-effects).*
 
 ___
@@ -1428,7 +1428,7 @@ Sent to move.
 > Value indicating whether the player has just pressed down space-bar.
 
 `[11] Integer` Tick Id
-> The player's current tick identifier.
+> The player's current tick id.
 
 ### <a id="sm-mod">"mod"</a>
 Sent to toggle moderator mode.
@@ -1458,7 +1458,7 @@ Sent to activate a key.
 Sent to change the purple switch state.
 
 `[0] UInt` Switch Id
-> The switch identifier.
+> The switch id.
 
 `[1] Integer` Enabled
 > Value indicating the state of the switch. 1 = active, 0 = disabled.
@@ -1470,7 +1470,7 @@ Sent to reject add to crew request.
 Sent to request adding of the world to a crew.
 
 `[0] String` Crew Id
-> The crew identifier.
+> The crew id.
 
 ### <a id="sm-reset">"reset"</a>
 Sent to reset progress.
@@ -1550,7 +1550,7 @@ Sent to change the zombie limit.
 Sent to change smiley.
 
 `[0] Integer` Smiley
-> The smiley identifier.
+> The smiley id.
 
 ### <a id="sm-smileyGoldBorder">"smileyGoldBorder"</a>
 Sent to enable or disable gold smiley border.
@@ -1578,10 +1578,10 @@ Sent to request ["time"](#rm-time) message response.
 Sent to touch other player transferring effects.
 
 `[0] Integer` Player Id
-> The touched player's identifier.
+> The touched player's id.
 
 `[1] Integer` Effect
-> The effect identifier.
+> The effect id.
 
 
 ### <a id="sm-unfavorite">"unfavorite"</a>
