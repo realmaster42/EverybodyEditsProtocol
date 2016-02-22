@@ -148,13 +148,13 @@ Version = 206
 
 # <a id="room-types">Room Types</a>
 ```
-Normal      = EverybodyeditsXXX
-Beta        = BetaXXX
-Lobby       = LobbyXXX
-Crew Lobby  = CrewLobbyXXX
-Guest Lobby = GuestLobbyXXX
+Normal      = Everybodyedits{version}
+Beta        = Beta{version}
+Lobby       = Lobby{version}
+Crew Lobby  = CrewLobby{version}
+Guest Lobby = GuestLobby{version}
 
-(Replace XXX with the current version)
+(Replace {version} with the current version)
 ```
 ___
 
@@ -162,6 +162,8 @@ ___
 
 ### <a id="rm-access">"access"</a>
 Occurs when you are given edit rights in the world.
+
+*(This event does not contain any other information.)*
 
 ### <a id="rm-add">"add"</a>
 Occurs when someone joins the world.
@@ -236,7 +238,7 @@ Occurs when someone joins the world.
 
 `[22] Boolean` Can Edit
 > Value indicating whether the player can edit in this world.  
-> **NOTE:** This is received only by the world owner.
+> **NOTE:** This can only be received by the world owner.
 
 ### <a id="rm-addedToCrew">"addedToCrew"</a>
 Occurs when world was successfully added to a crew.
@@ -284,7 +286,7 @@ Occurs when a player uses auto-text.
 > The automatic text value.
 > *See [Auto Text](#model-auto-text).*
 
-___
+
 
 ### <a id="rm-b">"b"</a>
 Occurs when a block is placed in the world.
@@ -309,10 +311,10 @@ Occurs when the background color of the world is changed.
 
 `[0] UInt` Color
 > The color of the background.
-> **NOTE:** Transparent color means that the custom background color is disabled.
+> **NOTE:** transparent color means the custom background color is disabled.
 
 ### <a id="rm-badgeChange">"badgeChange"</a>
-Occurs when a player changes badge.
+Occurs when a player changes their badge.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -378,7 +380,7 @@ Occurs when a sound block is placed in the world.
 `[4] UInt` Player Id
 > The identifier of the player which placed this block.
 
-___
+
 
 ### <a id="rm-c">"c"</a>
 Occurs when a player's gold or blue coin count changes.
@@ -422,7 +424,7 @@ This message has 2 possible outcomes:
 `[1] String` World URL
 > The image URL of the next world in the campaign.
 
-Both of these outcomes are followed with list of rewards described as follows:
+Both outcomes are followed with list of rewards: 
 
 `[...] String` Id
 > The identifier of the reward.
@@ -447,7 +449,7 @@ Occurs when the world is cleared.
 
 ### <a id="rm-completedLevel">"completedLevel"</a>
 Occurs when completing a world by touching win trophy.  
-**NOTE:** If player received campaign rewards, ["campaignRewards"](#rm-campaignRewards) message is received instead.
+**NOTE:** If player received campaign rewards, the ["campaignRewards"](#rm-campaignRewards) message is received instead.
 
 ### <a id="rm-crewAddRequest">"crewAddRequest"</a>
 Occurs when a player requests to add the world to their crew.
@@ -465,11 +467,11 @@ Occurs when an attempt to request adding of the world to a crew didn't succeed.
 `[0] String` Reason
 > The reason of the failure.
 
-___
+
 
 ### <a id="rm-editRights">"editRights"</a>
 Occurs when a player receives or loses edit rights.
-**NOTE:** You receive this even only if you are the owner of the world.
+**NOTE:** You can only recieve this message if you are the world owner.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -490,12 +492,10 @@ Occurs when a player gains or looses an effect.
 `[2] Boolean` Enabled
 > Value indicating whether the effect is enabled.
 
-Conditional parameters:
+`[3] Double` Argument *(optional)*
+> The optional argument of the effect (time left, number of jumps, etc.)
 
-`[3] Double` Argument
-> The optional argument of the effect. (time left, number of jumps, etc.)
-
-`[4] Integer` Duration
+`[4] Integer` Duration *(optional)*
 > The duration of the effect.
 
 ### <a id="rm-effectlimits">"effectlimits"</a>
@@ -507,7 +507,7 @@ Occurs when effect limits are changed.
 `[1] Integer` Zombie Limit
 > The zombie limit.
 
-___
+
 
 ### <a id="rm-face">"face"</a>
 Occurs when someone changes their smiley.
@@ -520,8 +520,6 @@ Occurs when someone changes their smiley.
 
 ### <a id="rm-favorited">"favorited"</a>
 Occurs when you successfully favorited the world.
-
-___
 
 ### <a id="rm-givemagicbrickpackage">"givemagicbrickpackage"</a>
 Occurs when you are given a magic brick package.
@@ -544,7 +542,6 @@ Occurs when a player toggles god mode.
 `[1] Boolean` Is In God Mode
 > Value indicating whether this player is now in god mode.
 
-___
 
 ### <a id="rm-hide">"hide"</a>
 Occurs when a player touches a key or timed doors change their state.
@@ -557,15 +554,14 @@ Occurs when a player touches a key or timed doors change their state.
 > *See [Keys](#model-keys).*
 
 ### <a id="rm-hideLobby">"hideLobby"</a>
-Occurs when world hidden in the lobby setting is changed.
+Occurs when "world hidden in the lobby setting" is toggled.
 
 `[0] Boolean` Hidden
-> Value indicating whether the world is now hidden from the lobby and profile.
+> Value indicating whether the world is hidden from the lobby and profile.
 
-___
 
 ### <a id="rm-info">"info"</a>
-Occurs when the server sends information pertaining to low-level functions like (a) you were kicked or (b) the room is full or (c) rate limit exceeded.
+Occurs when the server sends information like (a) you were kicked or (b) the room is full or (c) rate limit exceeded.
 
 `[0] String` Title
 > The title of the message.
@@ -574,7 +570,7 @@ Occurs when the server sends information pertaining to low-level functions like 
 > The text of the message.
 
 ### <a id="rm-info2">"info2"</a>
-Occurs when the server sends low priority information that can be displayed in non-invasive pop-up.
+Occurs when the server sends low priority information that can be displayed in an non-invasive pop-up.
 
 `[0] String` Title
 > The title of the message.
@@ -590,7 +586,7 @@ Contains world information such as world name and the world content.
 > The username of the world owner.
 
 `[1] String` World Name
-> The name of the world.
+> The world name.
 
 `[2] Integer` Plays
 > The amount of plays.
@@ -712,7 +708,6 @@ Contains world information such as world name and the world content.
 ### <a id="rm-init2">"init2"</a>
 Occurs when joining world is completed.
 
-___
 
 ### <a id="rm-joinCampaign">"joinCampaign"</a>
 Occurs when player joins a campaign world.
@@ -736,7 +731,6 @@ Additional parameters received when this campaign world is unlocked:
 `[4] Integer` Tiers
 > The amount of tiers in the campaign.
 
-___
 
 ### <a id="rm-k">"k"</a>
 Occurs when a player collects gold crown.
@@ -757,7 +751,6 @@ Occurs when someone receives a silver crown.
 `[0] Integer` Player Id
 > The player's identifier.
 
-___
 
 ### <a id="rm-lb">"lb"</a>
 Occurs when someone places a label block.
@@ -787,10 +780,10 @@ Occurs when someone leaves the world.
 > The player's identifier.
 
 ### <a id="rm-liked">"liked"</a>
-Occurs when you successfully liked the world.
+Occurs when you liked the world.
 
 ### <a id="rm-lobbyPreviewEnabled">"lobbyPreviewEnabled"</a>
-Occurs when lobby preview is enabled or disabled.
+Occurs when lobby preview is toggled.
 
 `[0] Boolean` Enabled
 > Value indicating whether the lobby preview is now enabled.
@@ -798,10 +791,9 @@ Occurs when lobby preview is enabled or disabled.
 ### <a id="rm-lostaccess">"lostaccess"</a>
 Occurs when you lose edit rights.
 
-___
 
 ### <a id="rm-m">"m"</a>
-Occurs when someone moves.
+Occurs when a user moves.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -839,10 +831,10 @@ Occurs when someone moves.
 > Value indicating whether the player has just pressed down space-bar.
 
 ### <a id="rm-magic">"magic"</a>
-Occurs when you are given magic reward.
+Occurs when you are given a magic reward.
 
 ### <a id="rm-minimapEnabled">"minimapEnabled"</a>
-Occurs when the minimap is enabled or disabled.
+Occurs when the minimap is toggled.
 
 `[0] Boolean` Minimap Enabled
 > Value indicating whether the minimap is now enabled.
@@ -857,7 +849,7 @@ Occurs when a player toggles moderator mode.
 > Value indicating whether the player is now in moderator mode.
 
 ### <a id="rm-muted">"muted"</a>
-Occurs when you successfully muted or un-umted someone.
+Occurs when you muted or un-umted a player.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -865,10 +857,9 @@ Occurs when you successfully muted or un-umted someone.
 `[1] Boolean` Muted
 > Value indicating whether the player is now muted.
 
-___
 
 ### <a id="rm-ps">"ps"</a>
-Occurs when someone touches purple switch.
+Occurs when a player touches a purple switch.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -913,10 +904,9 @@ Occurs when a portal is placed in the world.
 `[6] Integer` Player Id
 > The identifier of the player which placed this block.
 
-___
 
 ### <a id="rm-reset">"reset"</a>
-Occurs when world is reverted to the last save using /loadlevel command.
+Occurs when world is reverted to the last save using the /loadlevel command.
 
 `[0] String` ws
 > Indicates the start of the world data.
@@ -982,15 +972,14 @@ Occurs when the world description is changed.
 > The world description.
 
 ### <a id="rm-roomVisible">"roomVisible"</a>
-Occurs when the world accessibility is changed.
+Occurs when the world accessibility is toggled.
 
 `[0] Boolean` Accessible
 > Value indicating whether the world is now accessible by other players.
 
-___
 
 ### <a id="rm-saved">"saved"</a>
-Occurs when you successfully saved world.
+Occurs when you saved the world.
 
 ### <a id="rm-say">"say"</a>
 Occurs when a player sends a chat message.
@@ -1018,14 +1007,14 @@ Contains information about chat message from before you joined the world.
 > The chat color of the sender.
 
 ### <a id="rm-show">"show"</a>
-Occurs when key deactivates or timed doors change their state.
+Occurs when a key deactivates or timed doors change their state.
 
 `[0] String` Key
 > The name of the key (or timed door).
 > *See [Keys](#model-keys).*
 
 ### <a id="rm-smileyGoldBorder">"smileyGoldBorder"</a>
-Occurs when someone enables or disables gold smiley border.
+Occurs when someone toggles the gold smiley border.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -1033,10 +1022,9 @@ Occurs when someone enables or disables gold smiley border.
 `[1] Boolean` Gold Smiley Border
 > Value indicating whether the player is wearing gold smiley border.
 
-___
 
 ### <a id="rm-team">"team"</a>
-Occurs when someone changes their team.
+Occurs when a player changes their team.
 
 `[0] Integer` Player Id
 > The player's identifier.
@@ -1046,7 +1034,7 @@ Occurs when someone changes their team.
 > *See [Teams](#model-teams).*
 
 ### <a id="rm-tele">"tele"</a>
-Occurs when multiple players are teleported. This event gets raised for respawns of any kind, including death.
+Occurs when multiple players are teleported or respawns (including death.)
 
 `[0] Boolean` Reset
 > Value indicating whether the player's properties were reset.
@@ -1119,10 +1107,10 @@ Occurs when a sign block is placed in the world.
 ___
 
 ### <a id="rm-unfavorited">"unfavorited"</a>
-Occurs when you successfully un-favorite the world.
+Occurs when you un-favorite the world.
 
 ### <a id="rm-unliked">"unliked"</a>
-Occurs when you successfully un-like the world.
+Occurs when you un-like the world.
 
 ### <a id="rm-updatemeta">"updatemeta"</a>
 Occurs when world metadata is updated.
@@ -1143,9 +1131,8 @@ Occurs when world metadata is updated.
 > The amount of likes.
 
 ### <a id="rm-upgrade">"upgrade"</a>
-Occurs when the server version has increased.
+Occurs when the server has updated,
 
-___
 
 ### <a id="rm-worldReleased">"worldReleased"</a>
 Occurs when crew world has been released.
@@ -1169,7 +1156,7 @@ Occurs when a world portal is placed in the world.
 > The identifier of the player which placed this block.
 
 ### <a id="rm-write">"write"</a>
-Occurs when a non-player message is received. (System messages, etc.)
+Occurs when a non-player message is received (system messages, etc.)
 
 `[0] String` Title
 > The title of the message.
@@ -1177,7 +1164,6 @@ Occurs when a non-player message is received. (System messages, etc.)
 `[1] String` Text
 > The text of the message.
 
-___
 
 # <a id="send-messages">Send messages</a>
 
@@ -1209,7 +1195,6 @@ Sent to use auto-say message.
 > The auto-text message identifier.
 > *See [Auto Text](#model-auto-text).*
 
-___
 
 ### <a id="sm-b">"b"</a>
 Sent to place a block in the world.
@@ -1270,7 +1255,6 @@ Additional arguments:
 `[5] Integer` Sign Type
 > The sign type.
 
-___
 
 ### <a id="sm-c">"c"</a>
 Sent to collect a coin.
@@ -1288,7 +1272,7 @@ Sent to collect a coin.
 > The y coordinate of the coin's position.
 
 ### <a id="sm-caketouch">"caketouch"</a>
-Sent to touch a cake.
+Sent when a cake is touched.
 
 `[0] UInt` X
 > The x coordinate of the cake's position.
@@ -1324,7 +1308,6 @@ Sent to collect the gold crown.
 `[1] UInt` Y
 > The y coordinate of the crown's position.
 
-___
 
 ### <a id="sm-death">"death"</a>
 Sent to die.
@@ -1358,7 +1341,6 @@ ___
 ### <a id="sm-favorite">"favorite"</a>
 Sent to favorite the world.
 
-___
 
 ### <a id="sm-god">"god"</a>
 Sent to change the god mode state.
@@ -1366,7 +1348,6 @@ Sent to change the god mode state.
 `[0] Boolean` God Mode
 > Value indicating whether the god mode should be enabled.
 
-___
 
 ### <a id="sm-hologramtouch">"hologramtouch"</a>
 Sent to touch a hologram.
@@ -1377,7 +1358,6 @@ Sent to touch a hologram.
 `[1] UInt` Y
 > The y coordinate of the hologram's position.
 
-___
 
 ### <a id="sm-init">"init"</a>
 Sent to request initialization message.
@@ -1385,7 +1365,6 @@ Sent to request initialization message.
 ### <a id="sm-init2">"init2"</a>
 Sent to request initialization messages such as add, k, etc.
 
-___
 
 ### <a id="sm-key">"key"</a>
 Sent to change the edit key.
@@ -1396,7 +1375,6 @@ Sent to change the edit key.
 ### <a id="sm-kill">"kill"</a>
 Sent to kill the world.
 
-___
 
 ### <a id="sm-levelcomplete">"levelcomplete"</a>
 Sent to complete the world.
@@ -1410,7 +1388,6 @@ Sent to complete the world.
 ### <a id="sm-like">"like"</a>
 Sent to like the world.
 
-___
 
 ### <a id="sm-m">"m"</a>
 Sent to move.
@@ -1456,7 +1433,6 @@ Sent to move.
 ### <a id="sm-mod">"mod"</a>
 Sent to toggle moderator mode.
 
-___
 
 ### <a id="sm-name">"name"</a>
 Sent to change the world name.
@@ -1464,7 +1440,6 @@ Sent to change the world name.
 `[0] String` World Name
 > The world name.
 
-___
 
 ### <a id="sm-pressKey">"pressKey"</a>
 Sent to activate a key.
@@ -1488,8 +1463,6 @@ Sent to change the purple switch state.
 `[1] Integer` Enabled
 > Value indicating the state of the switch. 1 = active, 0 = disabled.
 
-___
-
 ### <a id="sm-rejectAddToCrew">"rejectAddToCrew"</a>
 Sent to reject add to crew request.
 
@@ -1508,7 +1481,6 @@ Sent to reset progress.
 `[1] UInt` Y
 > The y coordinate of the reset block's position.
 
-___
 
 ### <a id="sm-save">"save"</a>
 Sent to save the world.
@@ -1586,7 +1558,6 @@ Sent to enable or disable gold smiley border.
 `[0] Boolean` Gold Smiley Border
 > Value indicating whether the gold smiley border should be enabled.
 
-___
 
 ### <a id="sm-team">"team"</a>
 Sent to change team.
@@ -1612,7 +1583,6 @@ Sent to touch other player transferring effects.
 `[1] Integer` Effect
 > The effect identifier.
 
-___
 
 ### <a id="sm-unfavorite">"unfavorite"</a>
 Sent to un-favorite the world.
@@ -1620,7 +1590,6 @@ Sent to un-favorite the world.
 ### <a id="sm-unlike">"unlike"</a>
 Sent to un-like the world.
 
-___
 
 # <a id="models">Models</a>
 
