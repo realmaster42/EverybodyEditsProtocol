@@ -554,7 +554,7 @@ Occurs when a player touches a key or timed doors change their state.
 > *See [Keys](#model-keys).*
 
 ### <a id="rm-hideLobby">"hideLobby"</a>
-Occurs when "world hidden in the lobby setting" is toggled.
+Occurs when "world hidden in the lobby setting" is changed.
 
 `[0] Boolean` Hidden
 > Value indicating whether the world is hidden from the lobby and profile.
@@ -783,7 +783,7 @@ Occurs when someone leaves the world.
 Occurs when you liked the world.
 
 ### <a id="rm-lobbyPreviewEnabled">"lobbyPreviewEnabled"</a>
-Occurs when lobby preview is toggled.
+Occurs when lobby preview is enabled or disabled.
 
 `[0] Boolean` Enabled
 > Value indicating whether the lobby preview is now enabled.
@@ -834,7 +834,7 @@ Occurs when a user moves.
 Occurs when you are given a magic reward.
 
 ### <a id="rm-minimapEnabled">"minimapEnabled"</a>
-Occurs when the minimap is toggled.
+Occurs when the minimap is changed.
 
 `[0] Boolean` Minimap Enabled
 > Value indicating whether the minimap is now enabled.
@@ -972,7 +972,7 @@ Occurs when the world description is changed.
 > The world description.
 
 ### <a id="rm-roomVisible">"roomVisible"</a>
-Occurs when the world accessibility is toggled.
+Occurs when the world accessibility is changed.
 
 `[0] Boolean` Accessible
 > Value indicating whether the world is now accessible by other players.
@@ -1014,7 +1014,7 @@ Occurs when a key deactivates or timed doors change their state.
 > *See [Keys](#model-keys).*
 
 ### <a id="rm-smileyGoldBorder">"smileyGoldBorder"</a>
-Occurs when someone toggles the gold smiley border.
+Occurs when someone enables or disables the gold smiley border.
 
 `[0] Integer` Player Id
 > The player's id.
