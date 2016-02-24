@@ -143,7 +143,7 @@ ___
 # <a id="game-information">Game Information</a>
 ```
 GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 206
+Version = 207
 ```
 
 # <a id="room-types">Room Types</a>
