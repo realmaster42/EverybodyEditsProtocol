@@ -1264,6 +1264,7 @@ Sent to un-like the world.
 | end          | Endurance
 | ffs          | Fractured Fingers
 | hlw          | Halloween
+| lcd          | Looks Can Deceive
 | pp1          | Puzzle Pack 1
 | rns          | Ancient Ruins
 | tnr          | Tunnel Rats
@@ -1274,7 +1275,7 @@ Sent to un-like the world.
 
 | Value | Name      |
 | ----  | -----     |
-| -`1`    | Locked
+| `-1`    | Locked
 | `0`     | Unlocked
 | `1`     | Completed
 
