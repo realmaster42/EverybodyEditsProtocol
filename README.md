@@ -198,7 +198,7 @@ Occurs when someone joins the world.
 > **NOTE:** This can only be received by the world owner.
 
 ### <a id="rm-addedToCrew">"addedToCrew"</a>
-When world was successfully added to a crew.
+Occurs when world was successfully added to a crew.
 
 | Id  | Type   | Name      | Description                                        |
 | --- | ----   | -----     | -----------                                        |
@@ -532,10 +532,11 @@ Contains information about campaign data of the world.
 
 Additional parameters received when this campaign world is unlocked:
 
-| Id | Type    | Name       | Description                          |
-| 2  | Integer | Difficulty | The campaign difficulty.             |
-| 3  | Integer | Tier       | The campaign tier of this world.     |
-| 4  | Integer | Tiers      | The amount of tiers in the campaign. |
+| Id  | Type    | Name       | Description                          |
+| --- | ----    | -----      | -----------                          |
+| 2   | Integer | Difficulty | The campaign difficulty.             |
+| 3   | Integer | Tier       | The campaign tier of this world.     |
+| 4   | Integer | Tiers      | The amount of tiers in the campaign. |
 
 
 ### <a id="rm-k">"k"</a>
@@ -802,7 +803,7 @@ Occurs when a player received or lost ability to toggle god mode.
 Occurs when a sign block is placed in the world.
 
 | Id   | Type   | Name        | Description                                   |
-| ---- | -----  | ----------- |
+| ---- | -----  | ----------- | -----------
 | 0    | UInt   | X           | The x coordinate of the block's position.     |
 | 1    | UInt   | Y           | The y coordinate of the block's position.     |
 | 2    | UInt   | Block Id    | The block id.                                 |
@@ -1056,7 +1057,7 @@ Sent to like the world.
 ### <a id="sm-m">"m"</a>
 Sent to move.
 
-| Id  | Double  | X                    | The x coordinate of the player's position.                                                                                   |
+| Id  | Type    | Name                 | Description The x coordinate of the player's position.                                                                       |
 | --- | ----    | -----                | -----------                                                                                                                  |
 | 0   | Double  | X                    | The x coordinate of the player's position.                                                                                   |
 | 1   | Double  | Y                    | The y coordinate of the player's position.                                                                                   |
@@ -1065,7 +1066,7 @@ Sent to move.
 | 4   | Double  | Horizontal Movement  | The horizontal movement modifier.                                                                                            |
 | 5   | Double  | Vertical Movement    | The vertical movement modifier.                                                                                              |
 | 6   | Integer | Horizontal Direction | The horizontal direction indicator. (`-1` means left, `1` means right and `0` means that player is not moving horizontally.) |
-| 7   | Integer | Vertical Direction   | The vertical direction indicator.  (`-1` means up, `1` means down and `0` means that player is not moving vertically.)
+| 7   | Integer | Vertical Direction   | The vertical direction indicator.  (`-1` means up, `1` means down and `0` means that player is not moving vertically.)       |
 | 8   | Double  | Gravity Multiplier   | The gravity multiplier.                                                                                                      |
 | 9   | Boolean | Space Pressed        | Value indicating whether the player holds down space-bar.                                                                    |
 | 10  | Boolean | Space Just Pressed   | Value indicating whether the player has just pressed down space-bar.                                                         |
@@ -1167,21 +1168,21 @@ Sent to enable or disable the minimap.
 Sent to change the world description.
 
 | Id   | Type   | Name        | Description            |
-| ---- | -----  | ----------- |
+| ---- | -----  | ----------- | ------------           |
 | 0    | String | Description | The world description. |
 
 ### <a id="sm-setRoomVisible">"setRoomVisible"</a>
 Sent to change the world accessibility.
 
 | Id   | Type    | Name        | Description                                                           |
-| ---- | -----   | ----------- |
+| ---- | -----   | ----------- | -----------                                                           |
 | 0    | Boolean | Accessible  | Value indicating whether other players are allowed to join the world. |
 
 ### <a id="sm-setStatus">"setStatus"</a>
 Sent to change the crew world status.
 
 | Id   | Type    | Name        | Description                                                           |
-| ---- | -----   | ----------- |
+| ---- | -----   | ----------- | -----------                                                           |
 | 0    | Integer | Crew Status | The crew world status. *See [Crew World Status](#model-crew-status).* |
 
 ### <a id="sm-setZombieLimit">"setZombieLimit"</a>
