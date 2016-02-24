@@ -1028,7 +1028,7 @@ Sent to touch a hologram.
 Sent to request initialization message.
 
 ### <a id="sm-init2">"init2"</a>
-Sent to request initialization messages such as add, k, etc.
+Sent to request initialization messages such as `add` and `k` events, etc.
 
 
 ### <a id="sm-key">"key"</a>
