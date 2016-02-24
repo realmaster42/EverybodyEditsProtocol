@@ -191,9 +191,10 @@ Occurs when someone joins the world.
     17	| Integer |  Aura Shape |  The player's aura shape id.|
     18	| Integer |  Aura Color |  The player's aura color id.|
     19	| Integer |  Chat Color |  The player's chat color.|
-    20	| String |  Badge |  The player's badge id.| > *See [Badges](#model-badges).*
+    20	| String |  Badge |  The player's badge id.|  *See [Badges](#model-badges).*
     21	| Boolean |  Crew Member |  Value indicating whether the player is a member of the crew to which belongs this world.|
     22	| Boolean |  Can Edit |  Value indicating whether the player can edit in this world.  |
+
 > **NOTE:** This can only be received by the world owner.
 
 ### <a id="rm-addedToCrew">"addedToCrew"</a>
@@ -234,8 +235,7 @@ Occurs when a player uses auto-text.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Payer Id |  The player's id.|
-     1	| String |  Auto-Text |  The automatic text value.|
-> *See [Auto Text](#model-auto-text).*
+     1	| String |  Auto-Text |  The automatic text value. *See [Auto Text](#model-auto-text).*
 
 ### <a id="rm-b">"b"</a>
 Occurs when a block is placed in the world.
@@ -253,8 +253,7 @@ Occurs when the background color of the world is changed.
 
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
-0 | UInt |  Color |  The color of the background.|
-> **NOTE:** transparent color means the custom background color is disabled.
+0 | UInt |  Color |  The color of the background. **NOTE:** transparent color means the custom background color is disabled.
 
 ### <a id="rm-badgeChange">"badgeChange"</a>
 Occurs when a player changes their badge.
@@ -262,8 +261,7 @@ Occurs when a player changes their badge.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Player Id |  The player's id.|
-     1	| String |  Badge |  The badge id.|
-> *See [Badges](#model-badges).*
+     1	| String |  Badge |  The badge id. *See [Badges](#model-badges).*
 
 ### <a id="rm-banned">"banned"</a>
 Occurs when trying to join a world with a banned account.
@@ -389,7 +387,7 @@ Occurs when a player gains or looses an effect.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Player Id |  The player's id.|
-     1	| Integer |  Effect |  The effect's id. > *See [Effects](#model-effects).* |
+     1	| Integer |  Effect |  The effect's id. *See [Effects](#model-effects).* |
      2	| Boolean |  Enabled |  Value indicating whether the effect is enabled.|
      3	| Double |  Argument *(optional)* |  The optional argument of the effect (time left, number of jumps, etc.)|
      4	| Integer |  Duration *(optional)* |  The duration of the effect.|
@@ -444,8 +442,7 @@ Occurs when a player touches a key or timed doors change their state.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Player Id |  The player's id.|
-     1	| String |  Key |  The name of the key (or timed door).|
-> *See [Keys](#model-keys).*
+     1	| String |  Key |  The name of the key (or timed door). *See [Keys](#model-keys).*
 
 ### <a id="rm-hideLobby">"hideLobby"</a>
 Occurs when "world hidden in the lobby setting" is changed.
@@ -498,7 +495,7 @@ Contains world information such as world name and the world content.
     18	| Integer |  World Width |  The width of the world.|
     19	| Integer |  World Height |  The height of the world.|
     20	| Double |  World Gravity Multiplier |  The world's gravity multiplier.|
-    21	| UInt |  Background Color |  The color of the background.  > **NOTE:** Transparent color means that the custom background color is disabled.| 
+    21	| UInt |  Background Color |  The color of the background. **NOTE:** Transparent color means that the custom background color is disabled.| 
     22	| Boolean |  Accessible |  Value indicating whether this world is accessible by other players.|
     23	| Boolean |  Hidden From Lobby |  Value indicating whether this world is hidden from the lobby and profile.|
     24	| Boolean |  Spectating Allowed |  Value indicating whether spectating in this world is allowed.|
@@ -509,13 +506,13 @@ Contains world information such as world name and the world content.
     29	| String |  Crew Id |  The id of the crew to which belongs this world.|
     30	| String |  Crew Name |  The name of the crew to which belongs this world.|
     31	| Boolean |  Can Change World Options |  Value indicating whether the player can change world options.| 
-    32	| Integer |  Crew Status |  The crew status of the world. > *See [Crew World Status](#model-crew-status).*| 
-    33	| String |  Badge |  The player's badge id.  > *See [Badges](#model-badges).*|
+    32	| Integer |  Crew Status |  The crew status of the world. *See [Crew World Status](#model-crew-status).*| 
+    33	| String |  Badge |  The player's badge id. *See [Badges](#model-badges).*|
     34	| Boolean |  Is Crew Member |  Value indicating whether the player is a member of the crew to which belongs this world.|
     35	| Boolean |  Minimap Enabled |  Value indicating whether the minimap is enabled in this world.|
     36	| Boolean |  Lobby Preview Enabled |  Value indicating whether the lobby preview is enabled in this world.|
     37	| String |  ws |  Indicates the start of the world data.|
-    38	| `[...]` > The serialized world data.
+    38	| `[...]`  The serialized world data.
     39	| String |  we |  Indicates the end of the world data.|
 
 ### <a id="rm-init2">"init2"</a>
@@ -529,8 +526,7 @@ Contains information about campaign data of the world.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | String |  Title |  The title of the campaign.|
-1	| Integer |  Status |  The campaign status.|
-> *See [Campaign Status](#model-campaign-status).*
+1	| Integer |  Status |  The campaign status. *See [Campaign Status](#model-campaign-status).* |
      	
 Additional parameters received when this campaign world is unlocked:
      	
@@ -544,8 +540,7 @@ Occurs when a player collects gold crown.
 
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
-0 | Integer |  Player Id |  The player's id.  |
-> **NOTE:** Set to `-1` if there is no player with a crown.
+0 | Integer |  Player Id |  The player's id. **NOTE:** Set to `-1` if there is no player with a crown. |
 
 ### <a id="rm-kill">"kill"</a>
 Occurs when a player is killed due to expired effect or /kill, /killall commands.
@@ -606,9 +601,8 @@ Occurs when a user moves.
      4	| Double |  Vertical Speed |  The vertical speed.|
      5	| Double |  Horizontal Modifier |  The horizontal movement modifier.|
      6	| Double |  Vertical Modifier |  The vertical movement modifier.|
-     7	| Integer |  Horizontal Movement |  Value indicating horizontal movement direction.  |
-> `-1` means left, `1` means right and `0` means that player is not moving horizontally.
-     8	| Integer |  Vertical Movement |  Value indicating vertical movement direction.   > `-1` means up, `1` means down and `0` means that player is not moving vertically.
+     7	| Integer |  Horizontal Movement |  Value indicating horizontal movement direction. *`-1` is left, `1` is right and `0` means that player is not moving horizontally.* |
+     8	| Integer |  Vertical Movement |  Value indicating vertical movement direction. *`-1` means up, `1` means down and `0` means that player is not moving vertically.*|
     	
     13	| Boolean |  Space Pressed |  Value indicating whether the player is holding down space-bar.|
     14	| Boolean |  Space Just Pressed |  Value indicating whether the player has just pressed down space-bar.|
@@ -647,8 +641,7 @@ Occurs when a player touches a purple switch.
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Player Id |  The player's id.|
      1	| Integer |  Switch Id |  The switch id.|
-     2	| Integer |  Enabled |  Value indicating the state of the switch.  |
-> `1` means pressed and `0` not.
+     2	| Integer |  Enabled |  Value indicating the state of the switch. *`1` means pressed and `0` not.*
 
 ### <a id="rm-psi">"psi"</a>
 Occurs after join. Contains information about initial switch states.
@@ -747,8 +740,7 @@ Occurs when a key deactivates or timed doors change their state.
 
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
-0 | String |  Key |  The name of the key (or timed door).|
-     1	> *See [Keys](#model-keys).*
+0 | String |  Key |  The name of the key (or timed door). *See [Keys](#model-keys).* |
 
 ### <a id="rm-smileyGoldBorder">"smileyGoldBorder"</a>
 Occurs when someone enables or disables the gold smiley border.
@@ -765,8 +757,7 @@ Occurs when a player changes their team.
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
 0 | Integer |  Player Id |  The player's id.|
-     1	| Integer |  Team |  The team id.|
-> *See [Teams](#model-teams).*
+     1	| Integer |  Team |  The team id. *See [Teams](#model-teams).* |
 
 ### <a id="rm-tele">"tele"</a>
 Occurs when multiple players are teleported or respawns (including death.)
@@ -893,8 +884,7 @@ Sent to use auto-say message.
 
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
-0 | Integer |  Auto-Text |  The auto-text message id.|
-> *See [Auto Text](#model-auto-text).*	
+0 | Integer |  Auto-Text |  The auto-text message id. *See [Auto Text](#model-auto-text).* |
 
 ### <a id="sm-b">"b"</a>
 Sent to place a block in the world.
@@ -980,8 +970,7 @@ Sent to change the badge.
 
 |Id | Type | Event | Description |
 | --- | ---- | ----- | ----------- |
-0 | String |  Badge |  The badge id.|
-> *See [Badges](#model-badges).*
+0 | String |  Badge |  The badge id. *See [Badges](#model-badges).* |
 
 ### <a id="sm-clear">"clear"</a>
 Sent to clear the world.
@@ -1013,8 +1002,7 @@ Sent to activate or deactivate an effect.
 | --- | ---- | ----- | ----------- |
 0 | UInt |  X |  The x coordinate of the effect's position.|
      1	| UInt |  Y |  The y coordinate of the effect's position.|
-     2	| Integer |  Effect |  The effect id.|
-> *See [Effects](#model-effects).*
+     2	| Integer |  Effect |  The effect id. *See [Effects](#model-effects).* |
 
 ### <a id="sm-favorite">"favorite"</a>
 Sent to favorite the world.
@@ -1100,12 +1088,11 @@ Sent to change the world name.
 ### <a id="sm-pressKey">"pressKey"</a>
 Sent to activate a key.
 
-| Id |Id | Type | Event | Description |
-| --- | --- | ---- | ----- | ----------- |
-0 0 | Integer |  X |  The x coordinate of the key's position.|
-     1	     1	| Integer |  Y |  The y coordinate of the key's position.|
-     2	     2	| String |  Key |  The name of the key.|
-> *See [Keys](#model-keys).*
+|Id | Type | Event | Description |
+| --- | ---- | ----- | ----------- |
+0 | Integer |  X |  The x coordinate of the key's position.|
+1	| Integer |  Y |  The y coordinate of the key's position.|
+2	| String |  Key |  The name of the key. *See [Keys](#model-keys).*
 
 ### <a id="sm-ps">"ps"</a>
 Sent to change the purple switch state.
@@ -1197,8 +1184,7 @@ Sent to change the crew world status.
 
 | Type | Event | Description |
 | ---- | ----- | ----------- |
-| Integer |  Crew Status |  The crew world status.|
-> *See [Crew World Status](#model-crew-status).*
+| Integer |  Crew Status |  The crew world status. *See [Crew World Status](#model-crew-status).* |
 
 ### <a id="sm-setZombieLimit">"setZombieLimit"</a>
 Sent to change the zombie limit.
