@@ -323,22 +323,22 @@ This message has 2 possible outcomes:
 
 | Id   | Type   | Name              | Description                   |
 | ---- | ----   | -----             | -----------                   |
-| `0`    | `String` | Badge Title       | The title of the badge.       |
-| `1`    | `String` | Badge Description | The description of the badge. |
-| `2`    | `String` | Badge URL         | The image URL of the badge.   |
+| `1`    | `String` | Badge Title       | The title of the badge.       |
+| `2`    | `String` | Badge Description | The description of the badge. |
+| `3`    | `String` | Badge URL         | The image URL of the badge.   |
 
 2. If the player didn't receive a badge:
 
 | Id   | Type   | Name      | Description                                      |
 | ---- | ----   | -----     | -----------                                      |
-| `0`    | `String` | World URL | The image URL of the next world in the campaign. |
+| `1`    | `String` | World URL | The image URL of the next world in the campaign. |
 
 Both outcomes are followed with list of rewards:
 
-| Id   | Type   | Name     | Description                 |
-| ---- | ----   | -----    | -----------                 |
-| `0`    | `String` | Id       | The id of the reward.       |
-| `1`    | `UInt`   | Quantity | The quantity of the reward. |
+| Id   | Type     | Name     | Description                 |
+| ---- | ----     | -----    | -----------                 |
+| N/A  | `String` | Id       | The id of the reward.       |
+| N/A  | `UInt`   | Quantity | The quantity of the reward. |
 
 ### <a id="rm-clear">"clear"</a>
 Occurs when the world is cleared.
