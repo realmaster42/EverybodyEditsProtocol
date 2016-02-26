@@ -1,5 +1,5 @@
 # Everybody Edits Messages Protocol
-The description of the Everybody Edits game protocol.
+This repo contains documentation on the PlayerIO based (http://everybodyedits.com)[Everybody Edits] API.
 
 ## Table of contents
 - [Game Information](#game-information)
