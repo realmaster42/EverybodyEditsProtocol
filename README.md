@@ -601,17 +601,17 @@ Occurs when a player moves.
 
 | Id  | Type    | Name                | Description                                                                                                                        |
 | --- | ----    | -----               | -----------                                                                                                                        |
-| `0`   | `Integer` | Player Id           | The player's id.                                                                                                                   |
-| `1`   | `Double`  | X                   | The x coordinate of the player's position.                                                                                         |
-| `2`   | `Double`  | Y                   | The y coordinate of the player's position.                                                                                         |
-| `3`   | `Double`  | Horizontal Speed    | The horizontal speed.                                                                                                              |
-| `4`   | `Double`  | Vertical Speed      | The vertical speed.                                                                                                                |
-| `5`   | `Double`  | Horizontal Modifier | The horizontal movement modifier.                                                                                                  |
-| `6`   | `Double`  | Vertical Modifier   | The vertical movement modifier.                                                                                                    |
-| `7`   | `Integer` | Horizontal Movement | Value indicating horizontal movement direction. *`-1` is left, `1` is right and `0` means that player is not moving horizontally.* |
-| `8`   | `Integer` | Vertical Movement   | Value indicating vertical movement direction. *`-1` means up, `1` means down and `0` means that player is not moving vertically.*  |
-| `9`   | `Boolean` | Space Pressed       | Value indicating whether the player is holding down space-bar.                                                                     |
-| `10`  | `Boolean` | Space Just Pressed  | Value indicating whether the player has just pressed down space-bar.                                                               |
+| `0`   | `Integer` | Player Id            | The player's id.                                                                                                                   |
+| `1`   | `Double`  | X                    | The x coordinate of the player's position.                                                                                         |
+| `2`   | `Double`  | Y                    | The y coordinate of the player's position.                                                                                         |
+| `3`   | `Double`  | Horizontal Speed     | The horizontal speed.                                                                                                              |
+| `4`   | `Double`  | Vertical Speed       | The vertical speed.                                                                                                                |
+| `5`   | `Double`  | Horizontal Modifier  | The horizontal movement modifier.                                                                                                  |
+| `6`   | `Double`  | Vertical Modifier    | The vertical movement modifier.                                                                                                    |
+| `7`   | `Integer` | Horizontal Direction | The horizontal movement direction indicator. *(`-1` means left, `1` means right and `0` means that player is not moving horizontally.)* |
+| `8`   | `Integer` | Vertical Direction   | The vertical movement direction indicator. *(`-1` means up, `1` means down and `0` means that player is not moving vertically.)*  |
+| `9`   | `Boolean` | Space Pressed        | Value indicating whether the player is holding down space-bar.                                                                     |
+| `10`  | `Boolean` | Space Just Pressed   | Value indicating whether the player has just pressed down space-bar.                                                               |
 
 ### <a id="rm-magic">"magic"</a>
 Occurs when you are given a magic reward.
@@ -1065,10 +1065,10 @@ Sent to move.
 | `1`   | `Double`  | Y                    | The y coordinate of the player's position.                                                                                   |
 | `2`   | `Double`  | Horizontal Speed     | The horizontal movement speed.                                                                                               |
 | `3`   | `Double`  | Vertical Speed       | The vertical movement speed.                                                                                                 |
-| `4`   | `Double`  | Horizontal Movement  | The horizontal movement modifier.                                                                                            |
-| `5`   | `Double`  | Vertical Movement    | The vertical movement modifier.                                                                                              |
-| `6`   | `Integer` | Horizontal Direction | The horizontal direction indicator. (`-1` means left, `1` means right and `0` means that player is not moving horizontally.) |
-| `7`   | `Integer` | Vertical Direction   | The vertical direction indicator.  (`-1` means up, `1` means down and `0` means that player is not moving vertically.)       |
+| `4`   | `Double`  | Horizontal Modifier  | The horizontal movement modifier.                                                                                            |
+| `5`   | `Double`  | Vertical Modifier    | The vertical movement modifier.                                                                                              |
+| `6`   | `Integer` | Horizontal Direction | The horizontal movement direction indicator. *(`-1` means left, `1` means right and `0` means that player is not moving horizontally.)* |
+| `7`   | `Integer` | Vertical Direction   | The vertical movement direction indicator.  *(`-1` means up, `1` means down and `0` means that player is not moving vertically.)*       |
 | `8`   | `Double`  | Gravity Multiplier   | The gravity multiplier.                                                                                                      |
 | `9`   | `Boolean` | Space Pressed        | Value indicating whether the player holds down space-bar.                                                                    |
 | `10`  | `Boolean` | Space Just Pressed   | Value indicating whether the player has just pressed down space-bar.                                                         |
