@@ -284,11 +284,12 @@ Occurs when a morphable block is placed in the world.
 
 | Id  | Type    | Name      | Description                                   |
 | --- | ----    | -----     | -----------                                   |
-| `0`   | `UInt`    | X         | The x coordinate of the block's position.     |
-| `1`   | `UInt`    | Y         | The y coordinate of the block's position.     |
-| `2`   | `UInt`    | Morph     | The morph id.                                 |
-| `3`   | `Integer` | Layer     | The layer id.                                 |
-| `4`   | `UInt`    | Player Id | The id of the player which placed this block. |
+| `0` | `UInt`    | X         | The x coordinate of the block's position.     |
+| `1` | `UInt`    | Y         | The y coordinate of the block's position.     |
+| `2` | `UInt`    | Block Id  | The block's id.
+| `3` | `UInt`    | Morph     | The morph id.                                 |
+| `4` | `Integer` | Layer     | The layer id.                                 |
+| `5` | `UInt`    | Player Id | The id of the player which placed this block. |
 
 ### <a id="rm-bs">"bs"</a>
 Occurs when a sound block is placed in the world.
