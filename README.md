@@ -143,7 +143,7 @@ ___
 # <a id="game-information">Game Information</a>
 ```
 GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 207
+Version = 209
 ```
 
 *NOTE: the game ID is required to log into PlayerIO to send requests.*
@@ -644,14 +644,14 @@ Occurs when you muted or un-muted a player.
 
 
 ### <a id="rm-ps">"ps"</a>
-Occurs when a player touches a purple switch.
+Occurs when a player touches a switch.
 
 | Id  | Type      | Name        | Description |
 | --- | ----      | -----       | ----------- |
 | `0` | `Integer` | Player Id   | The player's id. |
 | `1` | `UInt`    | Switch Type | The type of the switch. |
 | `2` | `Integer` | Switch Id   | The switch id. |
-| `3` | `Boolean` | Enabled     | Value indicating whether the switch is enabled |
+| `3` | `Boolean` | Enabled     | Value indicating whether the switch is enabled. |
 
 ### <a id="rm-psi">"psi"</a>
 Occurs when initial switch states are sent after you join the world.
