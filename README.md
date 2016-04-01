@@ -195,7 +195,8 @@ Occurs when someone joins the world.
 | `19`  | `Integer` | Chat Color         | The player's chat color.                                                                                                 |
 | `20`  | `String`  | Badge              | The player's badge id.                                                                    *See [Badges](#model-badges).* |
 | `21`  | `Boolean` | Crew Member        | Value indicating whether the player is a member of the crew to which belongs this world.                                 |
-| `22`  | `Boolean` | Can Edit           | Value indicating whether the player can edit in this world.                                                              |
+| `22`  | `ByteArray` | Purple Switches  | Byte array of purple switch states. |
+| `23`  | `Boolean` | Can Edit           | Value indicating whether the player can edit in this world.                                                              |
 
 > **NOTE:** This can only be received by the world owner.
 
@@ -518,7 +519,8 @@ Occurs when the player initially joins the room.
 | `34`  | `Boolean` | Is Crew Member             | Value indicating whether the player is a member of the crew to which belongs this world.                     |
 | `35`  | `Boolean` | Minimap Enabled            | Value indicating whether the minimap is enabled in this world.                                               |
 | `36`  | `Boolean` | Lobby Preview Enabled      | Value indicating whether the lobby preview is enabled in this world.                                         |
-| `37`  | `String`  | ws                         | Indicates the start of the world data.                                                                       |
+| `37`  | `ByteArray` | Orange Switches          | Byte array with states of orange switches |
+| `38`  | `String`  | ws                         | Indicates the start of the world data.                                                                       |
 | N/A | `[...]` | The serialized world data. | Indicates the world data.                                                                                    |
 | N/A | `String`  | we                         | Indicates the end of the world data.                                                                         |
 
@@ -644,11 +646,12 @@ Occurs when you muted or un-muted a player.
 ### <a id="rm-ps">"ps"</a>
 Occurs when a player touches a purple switch.
 
-| Id  | Type    | Name      | Description                                                                |
-| --- | ----    | -----     | -----------                                                                |
-| `0`   | `Integer` | Player Id | The player's id.                                                           |
-| `1`   | `Integer` | Switch Id | The switch id.                                                             |
-| `2`   | `Integer` | Enabled   | Value indicating the state of the switch. *`1` means pressed and `0` not.*
+| Id  | Type      | Name        | Description |
+| --- | ----      | -----       | ----------- |
+| `0` | `Integer` | Player Id   | The player's id. |
+| `1` | `UInt`    | Switch Type | The type of the switch. |
+| `2` | `Integer` | Switch Id   | The switch id. |
+| `3` | `Boolean` | Enabled     | Value indicating whether the switch is enabled |
 
 ### <a id="rm-psi">"psi"</a>
 Occurs when initial switch states are sent after you join the world.
@@ -1097,12 +1100,15 @@ Sent to activate a key.
 | `2`   | `String`  | Key   | The name of the key. *See [Keys](#model-keys).* |
 
 ### <a id="sm-ps">"ps"</a>
-Sent to change the purple switch state.
+Sent to change the switch state.
 
-| Id  | Type    | Name      | Description                                                         |
-| --- | ----    | -----     | -----------                                                         |
-| `0`   | `UInt`    | Switch Id | The switch id.                                                      |
-| `1`   | `Integer` | Enabled   | Value indicating the state of the switch. `1` = active, `0` = disabled. |
+| Id  | Type      | Name        | Description |
+| --- | ----      | -----       | ----------- |
+| `0` | `UInt`    | X           | The x coordinate of the switch position. |
+| `1` | `UInt`    | Y           | The y coordinate of the switch position. |
+| `2` | `UInt`    | Switch Type | The type of the switch. |
+| `3` | `Integer` | Switch Id   | The switch id. |
+| `4` | `Boolean` | Enabled     | Value indicating whether the switch is enabled. |
 
 ### <a id="sm-rejectAddToCrew">"rejectAddToCrew"</a>
 Sent to reject add to crew request.
