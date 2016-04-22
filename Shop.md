@@ -105,6 +105,10 @@ Canvas Backgrounds			= brickbgcanvas
 Carnival backgrounds		= brickbgcarnival
 Neon Backgrounds			= brickneon
 Monster 					= brickmonster
+Spring 2016                 = brickspring2016
+Bronze spring trophy        = brickspringtrophybronze
+Silver spring trophy        = brickspringtrophysilver
+Gold spring trophy          = brickspringtrophygold
 ```
 
 ### <a id="shop-smileys">Smileys</a>
@@ -210,13 +214,16 @@ Sigh 				= smileysigh
 Surprise 			= smileysupprice
 Eyeball	 			= smileyeyeball
 Penguin 			= smileypenguin
-Sick                = smileysick
-Bee                 = smileybee
-Butterfly           = smileybutterfly
 Gold Smiley			= goldmember
 Gold Ninja			= goldmember
 Gold Robot			= goldmember
 Gold Top Hat		= goldmember
+Sick                = smileysick
+Unsure              = smileyunsure
+Goofy               = smileygoofy
+Raindrop            = smileyraindrop
+Bee                 = smileybee
+Butterfly           = smileybutterfly
 ```
 
 ### <a id="shop-worlds">Worlds</a>
