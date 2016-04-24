@@ -447,8 +447,8 @@ Occurs when a player touches a key or when timed doors change their state.
 
 | Id  | Type    | Name      | Description                                                     |
 | --- | ----    | -----     | -----------                                                     |
-| `0`   | `Integer` | Player Id | The player's id.                                                |
-| `1`   | `String`  | Key       | The name of the key (or timed door). *See [Keys](#model-keys).*
+| `0` | `String`  | Key       | The name of the key (or timed door). *See [Keys](#model-keys).* |
+| `1`   | `Integer` | Player Id | The player's id.|
 
 ### <a id="rm-hideLobby">"hideLobby"</a>
 Occurs when "world hidden in the lobby setting" is changed.
