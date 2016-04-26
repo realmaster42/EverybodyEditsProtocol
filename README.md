@@ -767,9 +767,10 @@ Occurs when a player changes their team.
 ### <a id="rm-tele">"tele"</a>
 Occurs when multiple players are teleported or respawned (including death.)
 
-| Id  | Type    | Name  | Description                                                  |
-| --- | ----    | ----- | -----------                                                  |
-| `0`   | `Boolean` | Reset | Value indicating whether the player's properties were reset. |
+| Id  | Type | Name  | Description |
+| --- | ---- | ----- | ----------- |
+| `0` | `Boolean` | Reset | Value indicating whether the player's properties were reset. |
+| `1` | `Boolean` | ResetSwitches | Value indicating whether orange switches were reset. |
 
 Repeated for each teleported player:
 
