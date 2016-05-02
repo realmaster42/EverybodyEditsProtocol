@@ -47,6 +47,7 @@ This repository contains documentation on the PlayerIO based [Everybody Edits](h
   - [left](#rm-left)
   - [liked](#rm-liked)
   - [lobbyPreviewEnabled](#rm-lobbyPreviewEnabled)
+  - [lockCampaign](#rm-lockCampaign)
   - [lostaccess](#rm-lostaccess)
   - [m](#rm-m)
   - [magic](#rm-magic)
@@ -592,12 +593,19 @@ Occurs when you liked the world.
 Occurs when the lobby preview is enabled or disabled.
 
 | Id  | Type    | Name    | Description                                                |
-| --- | ---     | ----    | -----                                                      | ----------- |
+| --- | ---     | ----    | -----                                                      |
 | `0`   | `Boolean` | Enabled | Value indicating whether the lobby preview is now enabled. |
+
+### <a id="rm-lockCampaign">"lockCampaign"</a>
+Occurs when you are locked out of campaign.
+This means that you can no longer complete it or receive rewards without rejoining the world.
+
+| Id  | Type     | Name          | Description |
+| --- | -------- | ------------- | ------------------------- |
+| `0` | `String` | Campaign Name | The name of the campaign. |
 
 ### <a id="rm-lostaccess">"lostaccess"</a>
 Occurs when you lose edit rights.
-
 
 ### <a id="rm-m">"m"</a>
 Occurs when a player moves.
