@@ -21,6 +21,7 @@ This repository contains documentation on the PlayerIO based [Everybody Edits](h
   - [bs](#rm-bs)
   - [c](#rm-c)
   - [campaignRewards](#rm-campaignRewards)
+  - [canAddToCrews](#rm-canAddToCrews)
   - [clear](#rm-clear)
   - [completedLevel](#rm-completedLevel)
   - [crewAddRequest](#rm-crewAddRequest)
@@ -343,6 +344,16 @@ Both outcomes are followed with list of rewards:
 | ---   | ----     | ----     | -----------
 | `N/A` | `String` | Id       | The id of the reward.
 | `N/A` | `UInt`   | Quantity | The quantity of the reward.
+
+### <a id="rm-canAddToCrews">"canAddToCrews"</a>
+Occurs after initialization. Contains information about crews to which current world can be added.
+
+| Id  | Type     | Name      | Description
+| --- | ----     | ----      | -----------
+| `0` | `String` | Crew Id   | The id of the crew.
+| `1` | `String` | Crew Name | The name of the crew.
+
+Repeated for each valid crew.
 
 ### <a id="rm-clear">"clear"</a>
 Occurs when the world is cleared.
