@@ -340,18 +340,18 @@ This message has 2 possible outcomes:
 
 Both outcomes are followed with list of rewards:
 
-| Id    | Type     | Name     | Description
-| ---   | ----     | ----     | -----------
-| `N/A` | `String` | Id       | The id of the reward.
-| `N/A` | `UInt`   | Quantity | The quantity of the reward.
+| Id      | Type     | Name     | Description
+| ---     | ----     | ----     | -----------
+| `[...]` | `String` | Id       | The id of the reward.
+| `[...]` | `UInt`   | Quantity | The quantity of the reward.
 
 ### <a id="rm-canAddToCrews">"canAddToCrews"</a>
 Occurs after initialization. Contains information about crews to which current world can be added.
 
-| Id  | Type     | Name      | Description
-| --- | ----     | ----      | -----------
-| `0` | `String` | Crew Id   | The id of the crew.
-| `1` | `String` | Crew Name | The name of the crew.
+| Id      | Type     | Name      | Description
+| ---     | ----     | ----      | -----------
+| `[...]` | `String` | Crew Id   | The id of the crew.
+| `[...]` | `String` | Crew Name | The name of the crew.
 
 Repeated for each valid crew.
 
@@ -487,49 +487,49 @@ Occurs when the server sends low priority information that can be displayed in a
 ### <a id="rm-init">"init"</a>
 Occurs when the player initially joins the room.
 
-| Id    | Type        | Name                       | Description
-| ---   | ----        | ----                       | -----------
-| `0`   | `String`    | Owner Username             | The username of the world owner.
-| `1`   | `String`    | World Name                 | The world name.
-| `2`   | `Integer`   | Plays                      | The amount of plays.
-| `3`   | `Integer`   | Favorites                  | The amount of favorites.
-| `4`   | `Integer`   | Likes                      | The amount of likes.
-| `5`   | `Integer`   | Player Id                  | The player's id.
-| `6`   | `Integer`   | Smiley                     | The player's smiley id.
-| `7`   | `Integer`   | Aura Shape                 | The player's aura shape id.
-| `8`   | `Integer`   | Aura Color                 | The player's aura color id.
-| `9`   | `Boolean`   | Gold Smiley Border         | Value indicating whether the player is wearing gold smiley border.
-| `10`  | `Double`    | X                          | The x coordinate of the player's spawn position.
-| `11`  | `Double`    | Y                          | The y coordinate of the player's spawn position.
-| `12`  | `UInt`      | Chat Color                 | The player's chat color.
-| `13`  | `String`    | Username                   | The player's username.
-| `14`  | `Boolean`   | Can Edit                   | Value indicating whether the player can edit.
-| `15`  | `Boolean`   | Is Owner                   | Value indicating whether the player is world owner.
-| `16`  | `Boolean`   | Favorited                  | Value indicating whether the player has favorited this world.
-| `17`  | `Boolean`   | Liked                      | Value indicating whether the player has liked this world.
-| `18`  | `Integer`   | World Width                | The width of the world.
-| `19`  | `Integer`   | World Height               | The height of the world.
-| `20`  | `Double`    | World Gravity Multiplier   | The world's gravity multiplier.
-| `21`  | `UInt`      | Background Color           | The color of the background. **NOTE:** Transparent color means that the custom background color is disabled.
-| `22`  | `Boolean`   | Accessible                 | Value indicating whether this world is accessible by other players.
-| `23`  | `Boolean`   | Hidden From Lobby          | Value indicating whether this world is hidden from the lobby and profile.
-| `24`  | `Boolean`   | Spectating Allowed         | Value indicating whether spectating in this world is allowed.
-| `25`  | `String`    | Description                | The description of the world.
-| `26`  | `Integer`   | Curse Limit                | The curse limit.
-| `27`  | `Integer`   | Zombie Limit               | The zombie limit.
-| `28`  | `Boolean`   | Belongs To Campaign        | Value indicating whether this world is part of a campaign.
-| `29`  | `String`    | Crew Id                    | The id of the crew to which belongs this world.
-| `30`  | `String`    | Crew Name                  | The name of the crew to which belongs this world.
-| `31`  | `Boolean`   | Can Change World Options   | Value indicating whether the player can change world options.
-| `32`  | `Integer`   | Crew Status                | The crew status of the world. *See [Crew World Status](#model-crew-status).*
-| `33`  | `String`    | Badge                      | The player's badge id. *See [Badges](#model-badges).*
-| `34`  | `Boolean`   | Is Crew Member             | Value indicating whether the player is a member of the crew to which belongs this world.
-| `35`  | `Boolean`   | Minimap Enabled            | Value indicating whether the minimap is enabled in this world.
-| `36`  | `Boolean`   | Lobby Preview Enabled      | Value indicating whether the lobby preview is enabled in this world.
-| `37`  | `ByteArray` | Orange Switches            | Byte array with states of orange switches
-| `38`  | `String`    | ws                         | Indicates the start of the world data.
-| `N/A` | `[...]`     | The serialized world data. | Indicates the world data.
-| `n    | `String`    | we                         | Indicates the end of the world data.
+| Id      | Type        | Name                       | Description
+| ---     | ----        | ----                       | -----------
+| `0`     | `String`    | Owner Username             | The username of the world owner.
+| `1`     | `String`    | World Name                 | The world name.
+| `2`     | `Integer`   | Plays                      | The amount of plays.
+| `3`     | `Integer`   | Favorites                  | The amount of favorites.
+| `4`     | `Integer`   | Likes                      | The amount of likes.
+| `5`     | `Integer`   | Player Id                  | The player's id.
+| `6`     | `Integer`   | Smiley                     | The player's smiley id.
+| `7`     | `Integer`   | Aura Shape                 | The player's aura shape id.
+| `8`     | `Integer`   | Aura Color                 | The player's aura color id.
+| `9`     | `Boolean`   | Gold Smiley Border         | Value indicating whether the player is wearing gold smiley border.
+| `10`    | `Double`    | X                          | The x coordinate of the player's spawn position.
+| `11`    | `Double`    | Y                          | The y coordinate of the player's spawn position.
+| `12`    | `UInt`      | Chat Color                 | The player's chat color.
+| `13`    | `String`    | Username                   | The player's username.
+| `14`    | `Boolean`   | Can Edit                   | Value indicating whether the player can edit.
+| `15`    | `Boolean`   | Is Owner                   | Value indicating whether the player is world owner.
+| `16`    | `Boolean`   | Favorited                  | Value indicating whether the player has favorited this world.
+| `17`    | `Boolean`   | Liked                      | Value indicating whether the player has liked this world.
+| `18`    | `Integer`   | World Width                | The width of the world.
+| `19`    | `Integer`   | World Height               | The height of the world.
+| `20`    | `Double`    | World Gravity Multiplier   | The world's gravity multiplier.
+| `21`    | `UInt`      | Background Color           | The color of the background. **NOTE:** Transparent color means that the custom background color is disabled.
+| `22`    | `Boolean`   | Accessible                 | Value indicating whether this world is accessible by other players.
+| `23`    | `Boolean`   | Hidden From Lobby          | Value indicating whether this world is hidden from the lobby and profile.
+| `24`    | `Boolean`   | Spectating Allowed         | Value indicating whether spectating in this world is allowed.
+| `25`    | `String`    | Description                | The description of the world.
+| `26`    | `Integer`   | Curse Limit                | The curse limit.
+| `27`    | `Integer`   | Zombie Limit               | The zombie limit.
+| `28`    | `Boolean`   | Belongs To Campaign        | Value indicating whether this world is part of a campaign.
+| `29`    | `String`    | Crew Id                    | The id of the crew to which belongs this world.
+| `30`    | `String`    | Crew Name                  | The name of the crew to which belongs this world.
+| `31`    | `Boolean`   | Can Change World Options   | Value indicating whether the player can change world options.
+| `32`    | `Integer`   | Crew Status                | The crew status of the world. *See [Crew World Status](#model-crew-status).*
+| `33`    | `String`    | Badge                      | The player's badge id. *See [Badges](#model-badges).*
+| `34`    | `Boolean`   | Is Crew Member             | Value indicating whether the player is a member of the crew to which belongs this world.
+| `35`    | `Boolean`   | Minimap Enabled            | Value indicating whether the minimap is enabled in this world.
+| `36`    | `Boolean`   | Lobby Preview Enabled      | Value indicating whether the lobby preview is enabled in this world.
+| `37`    | `ByteArray` | Orange Switches            | Byte array with states of orange switches
+| `38`    | `String`    | ws                         | Indicates the start of the world data.
+| `[...]` | `[...]`     | The serialized world data. | Indicates the world data.
+| `n      | `String`    | we                         | Indicates the end of the world data.
 
 ### <a id="rm-init2">"init2"</a>
 Occurs when joining world is completed.
@@ -784,12 +784,12 @@ Occurs when multiple players are teleported or respawned (including death.)
 
 Repeated for each teleported player:
 
-| Id  | Type      | Name      | Description
-| --- | ----      | ----      | -----------
-| `0` | `Integer` | Player Id | The player's id.
-| `1` | `Double`  | X         | The x coordinate of the player's respawn position.
-| `2` | `Double`  | Y         | The y coordinate of the player's respawn position.
-| `3` | `Integer` | Deaths    | The amount of player's deaths.
+| Id      | Type      | Name      | Description
+| ---     | ----      | ----      | -----------
+| `[...]` | `Integer` | Player Id | The player's id.
+| `[...]` | `Double`  | X         | The x coordinate of the player's respawn position.
+| `[...]` | `Double`  | Y         | The y coordinate of the player's respawn position.
+| `[...]` | `Integer` | Deaths    | The amount of player's deaths.
 
 ### <a id="rm-teleport">"teleport"</a>
 Occurs when a player is teleported to another location.
