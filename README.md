@@ -529,7 +529,7 @@ Occurs when the player initially joins the room.
 | `37`    | `ByteArray` | Orange Switches            | Byte array with states of orange switches
 | `38`    | `String`    | ws                         | Indicates the start of the world data.
 | `[...]` | `[...]`     | The serialized world data. | Indicates the world data.
-| `n      | `String`    | we                         | Indicates the end of the world data.
+| `[...]` | `String`    | we                         | Indicates the end of the world data.
 
 ### <a id="rm-init2">"init2"</a>
 Occurs when joining world is completed.
