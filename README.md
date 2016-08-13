@@ -145,7 +145,7 @@ ___
 # <a id="game-information">Game Information</a>
 ```
 GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 213
+Version = 214
 ```
 
 *NOTE: the game ID is required to log into PlayerIO to send requests.*
@@ -1309,7 +1309,7 @@ Sent to un-like the world.
 | `6`   | Team
 | `7`   | Low Gravity
 | `8`   | Fire
-| `9`   | Mutli Jump
+| `9`   | Multi Jump
 
 ### <a id="model-keys">Key names</a>
 
