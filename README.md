@@ -238,7 +238,7 @@ Occurs when a player uses auto-text.
 
 | Id  | Type      | Name      | Description
 | --- | ----      | ----      | -----------
-| `0` | `Integer` | Payer Id  | The player's id.
+| `0` | `Integer` | Player Id | The player's id.
 | `1` | `String`  | Auto-Text | The automatic text value. *See [Auto Text](#model-auto-text).*
 
 ### <a id="rm-b">"b"</a>
