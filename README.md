@@ -1079,6 +1079,17 @@ Sent to move.
 | `10` | `Boolean` | Space Just Pressed   | Value indicating whether the player has just pressed down space-bar.
 | `11` | `Integer` | Tick Id              | The player's current tick id.
 
+#### TIP
+If all you want to do is to move the player to a specific block, then you 
+can safely ignore most of these parameters and simply send these values:
+
+```
+x * 16, y * 16, 0, 0, 0, 0, 0, 0, 0, false, false, 0
+```
+
+This will move the player to the block located at the `x` by `y` position.
+The other parameters are only useful for more advanced movement code.
+
 ### <a id="sm-mod">"mod"</a>
 Sent to toggle moderator mode.
 
