@@ -145,7 +145,7 @@ ___
 # <a id="game-information">Game Information</a>
 ```
 GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 215
+Version = 216
 ```
 
 *NOTE: the game ID is required to log into PlayerIO to send requests.*
