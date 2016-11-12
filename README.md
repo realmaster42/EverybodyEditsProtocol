@@ -59,6 +59,7 @@ This repository contains documentation on the PlayerIO based [Everybody Edits](h
   - [psi](#rm-psi)
   - [pt](#rm-pt)
   - [reset](#rm-reset)
+  - [resetGlobalSwitches](#rm-resetGlobalSwitches)
   - [restoreProgress](#rm-restoreProgress)
   - [roomDescription](#rm-roomDescription)
   - [roomVisible](#rm-roomVisible)
@@ -145,7 +146,7 @@ ___
 # <a id="game-information">Game Information</a>
 ```
 GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 216
+Version = 217
 ```
 
 *NOTE: the game ID is required to log into PlayerIO to send requests.*
@@ -694,6 +695,9 @@ Occurs when world is reverted to the last save using the /loadlevel command.
 | `0` | `String` | ws      | Indicates the start of the world data.
 | `1` | `[...]`  | `[...]` | The serialized world data.
 | `n` | `String` | we      | Indicates the end of the world data.
+
+### <a id="rm-resetGlobalSwitches">"resetGlobalSwitches"</a>
+Occurs when global switches are reset.
 
 ### <a id="rm-restoreProgress">"restoreProgress"</a>
 Occurs when your campaign progress is restored.
