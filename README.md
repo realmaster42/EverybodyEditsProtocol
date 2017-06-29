@@ -145,8 +145,8 @@ ___
 
 # <a id="game-information">Game Information</a>
 ```
-GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 217
+GameID = eers-2-open-alpha-dq1cyz1b3ku5j7q16ej6vw
+Version = 221
 ```
 
 *NOTE: the game ID is required to log into PlayerIO to send requests.*
@@ -155,11 +155,10 @@ Version = 217
 
 | Type        | Room Name
 | ----        | ---------
-| Normal      | Everybodyedits{version}
+| Normal      | Everybuildexists{version}
 | Beta        | Beta{version}
 | Lobby       | Lobby{version}
 | Crew Lobby  | CrewLobby{version}
-| Guest Lobby | GuestLobby{version}
 
 (Replace {version} with the current version)
 
@@ -248,10 +247,10 @@ Occurs when a block is placed in the world.
 | Id  | Type      | Name      | Description
 | --- | ----      | ----      | -----------
 | `0` | `Integer` | Layer     | The layer id.
-| `1` | `UInt`    | X         | The x coordinate of the block's position.
-| `2` | `UInt`    | Y         | The y coordinate of the block's position.
-| `3` | `UInt`    | Block Id  | The block id.
-| `4` | `UInt`    | Player Id | The id of the player which placed this block.
+| `1` | `Integer`    | X         | The x coordinate of the block's position.
+| `2` | `Integer`    | Y         | The y coordinate of the block's position.
+| `3` | `Integer`    | Block Id  | The block id.
+| `4` | `Integer`    | Player Id | The id of the player which placed this block.
 
 ### <a id="rm-backgroundColor">"backgroundColor"</a>
 Occurs when the background color of the world is changed.
