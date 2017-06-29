@@ -1,5 +1,5 @@
-# Everybody Edits Messages Protocol
-This repository contains documentation on the PlayerIO based [Everybody Edits](http://everybodyedits.com) API.
+# Every Build Exists Messages Protocol
+This repository contains documentation on the PlayerIO based [Every Build Exists](http://everybuildexists.netii.net/) API.
 
 ## Table of contents
 - [Game Information](#game-information)
