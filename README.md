@@ -779,7 +779,7 @@ Occurs when a player changes their team.
 | `1` | `Integer` | Team      | The team id. *See [Teams](#model-teams).*
 
 ### <a id="rm-tele">"tele"</a>
-Occurs when multiple players are teleported or respawned (including death.)
+Occurs when multiple players are teleported.
 
 | Id  | Type      | Name           | Description
 | --- | ----      | ----           | -----------
