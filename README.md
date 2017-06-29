@@ -582,7 +582,8 @@ Occurs when a player places a label block.
 | `2` | `Integer` | Block Id   | The id of the block.
 | `3` | `String`  | Text       | The text.
 | `4` | `String`  | Text Color | The color of the text.
-| `5` | `UInt`    | Player Id  | The id of the player which placed this block.
+| `5` | `Integer` | Text Width | The width of the text in pixels. 
+| `6` | `Integer`    | Player Id  | The id of the player which placed this block.
 
 ### <a id="rm-left">"left"</a>
 Occurs when a player leaves the world.
@@ -662,7 +663,7 @@ Occurs when a player touches a switch.
 | Id  | Type      | Name        | Description
 | --- | ----      | ----        | -----------
 | `0` | `Integer` | Player Id   | The player's id.
-| `1` | `UInt`    | Switch Type | The type of the switch.
+| `1` | `Integer`    | Switch Type | The type of the switch.
 | `2` | `Integer` | Switch Id   | The switch id.
 | `3` | `Boolean` | Enabled     | Value indicating whether the switch is enabled.
 
@@ -679,12 +680,12 @@ Occurs when a portal is placed in the world.
 
 | Id  | Type      | Name            | Description
 | --- | ----      | ----            | -----------
-| `0` | `UInt`    | X               | The x coordinate of the block's position.
-| `1` | `UInt`    | Y               | The y coordinate of the block's position.
-| `2` | `UInt`    | Block Id        | The block id.
-| `3` | `UInt`    | Portal Rotation | The portal rotation.
-| `4` | `UInt`    | Portal Id       | The portal id.
-| `5` | `UInt`    | Portal Target   | The portal target id.
+| `0` | `Integer`    | X               | The x coordinate of the block's position.
+| `1` | `Integer`    | Y               | The y coordinate of the block's position.
+| `2` | `Integer`    | Block Id        | The block id.
+| `3` | `Integer`    | Portal Rotation | The portal rotation.
+| `4` | `Integer`    | Portal Id       | The portal id.
+| `5` | `Integer`    | Portal Target   | The portal target id.
 | `6` | `Integer` | Player Id       | The id of the player which placed this block.
 
 ### <a id="rm-reset">"reset"</a>
@@ -714,8 +715,8 @@ Occurs when your campaign progress is restored.
 | `7`  | `ByteArray` | Blue Coin X      | The x coordinates array of the blue coins positions.
 | `8`  | `ByteArray` | Blue Coin Y      | The y coordinates array of the blue coins positions.
 | `9`  | `Integer`   | Deaths           | The amount of deaths.
-| `10` | `UInt`      | Spawn X          | The x coordinate of the player's checkpoint position.
-| `11` | `UInt`      | Spawn Y          | The y coordinate of the player's checkpoint position.
+| `10` | `Integer`      | Spawn X          | The x coordinate of the player's checkpoint position.
+| `11` | `Integer`      | Spawn Y          | The y coordinate of the player's checkpoint position.
 | `12` | `ByteArray` | Switch States    | The byte array describing purple switches states.
 | `13` | `Double`    | Horizontal Speed | The horizontal movement speed.
 | `14` | `Double`    | Vertical Speed   | The vertical movement speed.
