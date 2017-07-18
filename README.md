@@ -1,5 +1,5 @@
 # Every Build Exists Messages Protocol
-This repository contains documentation on the PlayerIO based [Every Build Exists](http://everybuildexists.netii.net/) API.
+This repository contains documentation on the PlayerIO based [Every Build Exists](http://everybuildexists.site11.net/) API.
 
 ## Table of contents
 - [Game Information](#game-information)
