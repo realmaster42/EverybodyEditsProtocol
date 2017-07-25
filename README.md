@@ -1288,7 +1288,7 @@ Sent to un-like the world.
 | ffs          | Fractured Fingers
 | hlw          | Halloween
 | lcd          | Looks Can Deceive
-| pp1          | Puzzle Pack 1
+| pp           | Puzzle Pack
 | rns          | Ancient Ruins
 | spr          | Spring
 | stm          | Story Time
