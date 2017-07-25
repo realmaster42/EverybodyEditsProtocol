@@ -1282,6 +1282,7 @@ Sent to un-like the world.
 
 | Abbreviation | Name
 | ------------ | ----
+| 
 | adv          | Adventure League
 | clr          | Colorful
 | end          | Endurance
@@ -1293,7 +1294,12 @@ Sent to un-like the world.
 | spr          | Spring
 | stm          | Story Time
 | tnr          | Tunnel Rats
-| ttr          | Tutorials
+| tutorial     | Tutorials
+| easter       | Easter
+| summer       | Summer
+| beta         | Expert 2017
+| vet2017      | Alpha 2017
+| vet          | Veteran 2016
 | wtr          | Wintery Wonders
 
 
